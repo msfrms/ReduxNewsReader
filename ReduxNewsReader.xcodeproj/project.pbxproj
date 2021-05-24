@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		548DB001927D74CEC3D8883B /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */; };
+		62A975A59148D1BE81579B69 /* Pods_ReduxNewsReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EB67BD01DEF5DC7B42DC60 /* Pods_ReduxNewsReader.framework */; };
+		CFB13D0B265B949600A7C1B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D0A265B949600A7C1B7 /* AppDelegate.swift */; };
+		CFB13D0D265B949600A7C1B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D0C265B949600A7C1B7 /* SceneDelegate.swift */; };
+		CFB13D0F265B949600A7C1B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D0E265B949600A7C1B7 /* ViewController.swift */; };
+		CFB13D17265B949700A7C1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB13D15265B949700A7C1B7 /* LaunchScreen.storyboard */; };
+		CFB13D22265B949700A7C1B7 /* ReduxNewsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D21265B949700A7C1B7 /* ReduxNewsReaderTests.swift */; };
+		CFB13D2D265B949700A7C1B7 /* ReduxNewsReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D2C265B949700A7C1B7 /* ReduxNewsReaderUITests.swift */; };
+		CFB13D41265B9D9C00A7C1B7 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D3D265B9D9C00A7C1B7 /* Assets.swift */; };
+		CFB13D42265B9D9C00A7C1B7 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D3E265B9D9C00A7C1B7 /* Plist.swift */; };
+		CFB13D43265B9D9C00A7C1B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB13D3F265B9D9C00A7C1B7 /* Assets.xcassets */; };
+		F615EEC45BC6E75824BBB0B7 /* Pods_ReduxNewsReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8F996E77B788B190A0BD15 /* Pods_ReduxNewsReaderTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFB13D1E265B949700A7C1B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB13CFF265B949600A7C1B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFB13D06265B949600A7C1B7;
+			remoteInfo = ReduxNewsReader;
+		};
+		CFB13D29265B949700A7C1B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB13CFF265B949600A7C1B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFB13D06265B949600A7C1B7;
+			remoteInfo = ReduxNewsReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28C84ECC693DF28BAFD8E463 /* Pods-ReduxNewsReader-ReduxNewsReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReader-ReduxNewsReaderUITests.release.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReader-ReduxNewsReaderUITests/Pods-ReduxNewsReader-ReduxNewsReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3FE76064E19FA1144AF61D87 /* Pods-ReduxNewsReader-ReduxNewsReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReader-ReduxNewsReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReader-ReduxNewsReaderUITests/Pods-ReduxNewsReader-ReduxNewsReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F8F996E77B788B190A0BD15 /* Pods_ReduxNewsReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EFD4898BEE23E5BD810E2C /* Pods-ReduxNewsReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReader.debug.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader.debug.xcconfig"; sourceTree = "<group>"; };
+		CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB13D07265B949600A7C1B7 /* ReduxNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB13D0A265B949600A7C1B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFB13D0C265B949600A7C1B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CFB13D0E265B949600A7C1B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFB13D16265B949700A7C1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFB13D1D265B949700A7C1B7 /* ReduxNewsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxNewsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB13D21265B949700A7C1B7 /* ReduxNewsReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxNewsReaderTests.swift; sourceTree = "<group>"; };
+		CFB13D23265B949700A7C1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB13D28265B949700A7C1B7 /* ReduxNewsReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxNewsReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB13D2C265B949700A7C1B7 /* ReduxNewsReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxNewsReaderUITests.swift; sourceTree = "<group>"; };
+		CFB13D2E265B949700A7C1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB13D3D265B9D9C00A7C1B7 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		CFB13D3E265B9D9C00A7C1B7 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		CFB13D3F265B9D9C00A7C1B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFB13D40265B9D9C00A7C1B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2EB67BD01DEF5DC7B42DC60 /* Pods_ReduxNewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64DDB7B2E4CA104AD6BE90E /* Pods-ReduxNewsReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReaderTests.release.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReaderTests/Pods-ReduxNewsReaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD2CBB4F2185116273A2EDAA /* Pods-ReduxNewsReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReaderTests.debug.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReaderTests/Pods-ReduxNewsReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E717F1C018936189DD101D18 /* Pods-ReduxNewsReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReader.release.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFB13D04265B949600A7C1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A975A59148D1BE81579B69 /* Pods_ReduxNewsReader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB13D1A265B949700A7C1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F615EEC45BC6E75824BBB0B7 /* Pods_ReduxNewsReaderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB13D25265B949700A7C1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				548DB001927D74CEC3D8883B /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60027D623506CAD4AA4A1311 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB67BD01DEF5DC7B42DC60 /* Pods_ReduxNewsReader.framework */,
+				CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */,
+				6F8F996E77B788B190A0BD15 /* Pods_ReduxNewsReaderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA33CFFDF4529773AD4D9A56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78EFD4898BEE23E5BD810E2C /* Pods-ReduxNewsReader.debug.xcconfig */,
+				E717F1C018936189DD101D18 /* Pods-ReduxNewsReader.release.xcconfig */,
+				3FE76064E19FA1144AF61D87 /* Pods-ReduxNewsReader-ReduxNewsReaderUITests.debug.xcconfig */,
+				28C84ECC693DF28BAFD8E463 /* Pods-ReduxNewsReader-ReduxNewsReaderUITests.release.xcconfig */,
+				DD2CBB4F2185116273A2EDAA /* Pods-ReduxNewsReaderTests.debug.xcconfig */,
+				D64DDB7B2E4CA104AD6BE90E /* Pods-ReduxNewsReaderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFB13CFE265B949600A7C1B7 = {
+			isa = PBXGroup;
+			children = (
+				CFB13D09265B949600A7C1B7 /* ReduxNewsReader */,
+				CFB13D20265B949700A7C1B7 /* ReduxNewsReaderTests */,
+				CFB13D2B265B949700A7C1B7 /* ReduxNewsReaderUITests */,
+				CFB13D08265B949600A7C1B7 /* Products */,
+				BA33CFFDF4529773AD4D9A56 /* Pods */,
+				60027D623506CAD4AA4A1311 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFB13D08265B949600A7C1B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFB13D07265B949600A7C1B7 /* ReduxNewsReader.app */,
+				CFB13D1D265B949700A7C1B7 /* ReduxNewsReaderTests.xctest */,
+				CFB13D28265B949700A7C1B7 /* ReduxNewsReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFB13D09265B949600A7C1B7 /* ReduxNewsReader */ = {
+			isa = PBXGroup;
+			children = (
+				CFB13D3B265B9D9C00A7C1B7 /* Resources */,
+				CFB13D0A265B949600A7C1B7 /* AppDelegate.swift */,
+				CFB13D0C265B949600A7C1B7 /* SceneDelegate.swift */,
+				CFB13D0E265B949600A7C1B7 /* ViewController.swift */,
+				CFB13D15265B949700A7C1B7 /* LaunchScreen.storyboard */,
+			);
+			path = ReduxNewsReader;
+			sourceTree = "<group>";
+		};
+		CFB13D20265B949700A7C1B7 /* ReduxNewsReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB13D21265B949700A7C1B7 /* ReduxNewsReaderTests.swift */,
+				CFB13D23265B949700A7C1B7 /* Info.plist */,
+			);
+			path = ReduxNewsReaderTests;
+			sourceTree = "<group>";
+		};
+		CFB13D2B265B949700A7C1B7 /* ReduxNewsReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB13D2C265B949700A7C1B7 /* ReduxNewsReaderUITests.swift */,
+				CFB13D2E265B949700A7C1B7 /* Info.plist */,
+			);
+			path = ReduxNewsReaderUITests;
+			sourceTree = "<group>";
+		};
+		CFB13D3B265B9D9C00A7C1B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFB13D3C265B9D9C00A7C1B7 /* Generated */,
+				CFB13D3F265B9D9C00A7C1B7 /* Assets.xcassets */,
+				CFB13D40265B9D9C00A7C1B7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFB13D3C265B9D9C00A7C1B7 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				CFB13D3D265B9D9C00A7C1B7 /* Assets.swift */,
+				CFB13D3E265B9D9C00A7C1B7 /* Plist.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFB13D06265B949600A7C1B7 /* ReduxNewsReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB13D31265B949700A7C1B7 /* Build configuration list for PBXNativeTarget "ReduxNewsReader" */;
+			buildPhases = (
+				C5D6E733768E3F956A1F9981 /* [CP] Check Pods Manifest.lock */,
+				CFB13D03265B949600A7C1B7 /* Sources */,
+				CFB13D04265B949600A7C1B7 /* Frameworks */,
+				CFB13D05265B949600A7C1B7 /* Resources */,
+				959191A76480864D89B1E96A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReduxNewsReader;
+			productName = ReduxNewsReader;
+			productReference = CFB13D07265B949600A7C1B7 /* ReduxNewsReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFB13D1C265B949700A7C1B7 /* ReduxNewsReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB13D34265B949700A7C1B7 /* Build configuration list for PBXNativeTarget "ReduxNewsReaderTests" */;
+			buildPhases = (
+				623E5805F59BB514728FAE42 /* [CP] Check Pods Manifest.lock */,
+				CFB13D19265B949700A7C1B7 /* Sources */,
+				CFB13D1A265B949700A7C1B7 /* Frameworks */,
+				CFB13D1B265B949700A7C1B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB13D1F265B949700A7C1B7 /* PBXTargetDependency */,
+			);
+			name = ReduxNewsReaderTests;
+			productName = ReduxNewsReaderTests;
+			productReference = CFB13D1D265B949700A7C1B7 /* ReduxNewsReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFB13D27265B949700A7C1B7 /* ReduxNewsReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB13D37265B949700A7C1B7 /* Build configuration list for PBXNativeTarget "ReduxNewsReaderUITests" */;
+			buildPhases = (
+				A791E59735C0C9832A4E59D2 /* [CP] Check Pods Manifest.lock */,
+				CFB13D24265B949700A7C1B7 /* Sources */,
+				CFB13D25265B949700A7C1B7 /* Frameworks */,
+				CFB13D26265B949700A7C1B7 /* Resources */,
+				F71F86B2C1713D49761D9982 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB13D2A265B949700A7C1B7 /* PBXTargetDependency */,
+			);
+			name = ReduxNewsReaderUITests;
+			productName = ReduxNewsReaderUITests;
+			productReference = CFB13D28265B949700A7C1B7 /* ReduxNewsReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFB13CFF265B949600A7C1B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CFB13D06265B949600A7C1B7 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					CFB13D1C265B949700A7C1B7 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CFB13D06265B949600A7C1B7;
+					};
+					CFB13D27265B949700A7C1B7 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CFB13D06265B949600A7C1B7;
+					};
+				};
+			};
+			buildConfigurationList = CFB13D02265B949600A7C1B7 /* Build configuration list for PBXProject "ReduxNewsReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFB13CFE265B949600A7C1B7;
+			productRefGroup = CFB13D08265B949600A7C1B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFB13D06265B949600A7C1B7 /* ReduxNewsReader */,
+				CFB13D1C265B949700A7C1B7 /* ReduxNewsReaderTests */,
+				CFB13D27265B949700A7C1B7 /* ReduxNewsReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFB13D05265B949600A7C1B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB13D43265B9D9C00A7C1B7 /* Assets.xcassets in Resources */,
+				CFB13D17265B949700A7C1B7 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB13D1B265B949700A7C1B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB13D26265B949700A7C1B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		623E5805F59BB514728FAE42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxNewsReaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		959191A76480864D89B1E96A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A791E59735C0C9832A4E59D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxNewsReader-ReduxNewsReaderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5D6E733768E3F956A1F9981 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxNewsReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F71F86B2C1713D49761D9982 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReduxNewsReader-ReduxNewsReaderUITests/Pods-ReduxNewsReader-ReduxNewsReaderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReduxNewsReader-ReduxNewsReaderUITests/Pods-ReduxNewsReader-ReduxNewsReaderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReduxNewsReader-ReduxNewsReaderUITests/Pods-ReduxNewsReader-ReduxNewsReaderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFB13D03265B949600A7C1B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB13D42265B9D9C00A7C1B7 /* Plist.swift in Sources */,
+				CFB13D0F265B949600A7C1B7 /* ViewController.swift in Sources */,
+				CFB13D0B265B949600A7C1B7 /* AppDelegate.swift in Sources */,
+				CFB13D41265B9D9C00A7C1B7 /* Assets.swift in Sources */,
+				CFB13D0D265B949600A7C1B7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB13D19265B949700A7C1B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB13D22265B949700A7C1B7 /* ReduxNewsReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB13D24265B949700A7C1B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB13D2D265B949700A7C1B7 /* ReduxNewsReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFB13D1F265B949700A7C1B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFB13D06265B949600A7C1B7 /* ReduxNewsReader */;
+			targetProxy = CFB13D1E265B949700A7C1B7 /* PBXContainerItemProxy */;
+		};
+		CFB13D2A265B949700A7C1B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFB13D06265B949600A7C1B7 /* ReduxNewsReader */;
+			targetProxy = CFB13D29265B949700A7C1B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFB13D15265B949700A7C1B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFB13D16265B949700A7C1B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFB13D2F265B949700A7C1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFB13D30265B949700A7C1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFB13D32265B949700A7C1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78EFD4898BEE23E5BD810E2C /* Pods-ReduxNewsReader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DJL2F6JUJ;
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxNewsReader/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.msfrms.ReduxNewsReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFB13D33265B949700A7C1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E717F1C018936189DD101D18 /* Pods-ReduxNewsReader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DJL2F6JUJ;
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxNewsReader/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.msfrms.ReduxNewsReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFB13D35265B949700A7C1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD2CBB4F2185116273A2EDAA /* Pods-ReduxNewsReaderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DJL2F6JUJ;
+				INFOPLIST_FILE = ReduxNewsReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.msfrms.ReduxNewsReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxNewsReader.app/ReduxNewsReader";
+			};
+			name = Debug;
+		};
+		CFB13D36265B949700A7C1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D64DDB7B2E4CA104AD6BE90E /* Pods-ReduxNewsReaderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DJL2F6JUJ;
+				INFOPLIST_FILE = ReduxNewsReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.msfrms.ReduxNewsReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxNewsReader.app/ReduxNewsReader";
+			};
+			name = Release;
+		};
+		CFB13D38265B949700A7C1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FE76064E19FA1144AF61D87 /* Pods-ReduxNewsReader-ReduxNewsReaderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DJL2F6JUJ;
+				INFOPLIST_FILE = ReduxNewsReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.msfrms.ReduxNewsReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReduxNewsReader;
+			};
+			name = Debug;
+		};
+		CFB13D39265B949700A7C1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C84ECC693DF28BAFD8E463 /* Pods-ReduxNewsReader-ReduxNewsReaderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6DJL2F6JUJ;
+				INFOPLIST_FILE = ReduxNewsReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.msfrms.ReduxNewsReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReduxNewsReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFB13D02265B949600A7C1B7 /* Build configuration list for PBXProject "ReduxNewsReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB13D2F265B949700A7C1B7 /* Debug */,
+				CFB13D30265B949700A7C1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB13D31265B949700A7C1B7 /* Build configuration list for PBXNativeTarget "ReduxNewsReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB13D32265B949700A7C1B7 /* Debug */,
+				CFB13D33265B949700A7C1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB13D34265B949700A7C1B7 /* Build configuration list for PBXNativeTarget "ReduxNewsReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB13D35265B949700A7C1B7 /* Debug */,
+				CFB13D36265B949700A7C1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB13D37265B949700A7C1B7 /* Build configuration list for PBXNativeTarget "ReduxNewsReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB13D38265B949700A7C1B7 /* Debug */,
+				CFB13D39265B949700A7C1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFB13CFF265B949600A7C1B7 /* Project object */;
+}

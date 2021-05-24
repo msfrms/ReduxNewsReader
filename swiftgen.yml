@@ -1,0 +1,11 @@
+xcassets:
+    inputs:
+      - ReduxNewsReader/Assets.xcassets
+    outputs:
+      - templateName: swift4
+        output: ReduxNewsReader/Generated/Assets.swift
+plist:
+  inputs: ReduxNewsReader/Info.plist
+  outputs:
+    templateName: runtime-swift4
+    output: ReduxNewsReader/Generated/Plist.swift
