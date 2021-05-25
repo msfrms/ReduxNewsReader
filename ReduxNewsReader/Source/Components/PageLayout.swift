@@ -7,7 +7,7 @@
 
 import LayoutKit
 
-public class PageLayout: StackLayout<UIView> {
+public final class PageLayout: StackLayout<UIView> {
 
     public init(sublayout: Layout,
                 viewReuseId: String,
@@ -17,7 +17,7 @@ public class PageLayout: StackLayout<UIView> {
             distribution: .leading,
             sublayouts: [
                 InsetLayout(
-                    insets: .init(top: cornerRadius, left: 0, bottom: 0, right: 0),
+                    insets: .top(cornerRadius),
                     sublayout: sublayout)
             ],
             config: { view in
