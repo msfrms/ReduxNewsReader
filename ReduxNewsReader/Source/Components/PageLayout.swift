@@ -15,6 +15,7 @@ public final class PageLayout: StackLayout<UIView> {
         super.init(
             axis: .vertical,
             distribution: .leading,
+            viewReuseId: viewReuseId,
             sublayouts: [
                 InsetLayout(
                     insets: .top(cornerRadius),
