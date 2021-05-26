@@ -15,6 +15,7 @@ public final class OnboardingTextLayout: StackLayout<UIView> {
     }
     
     public init(props: Props, viewReuseId: String) {
+        let insets = UIEdgeInsets.left(40).right(40)
         super.init(
             axis: .vertical,
             spacing: 16,
@@ -34,7 +35,7 @@ public final class OnboardingTextLayout: StackLayout<UIView> {
                         ]
                     ),
                     viewReuseId: "\(viewReuseId).title"
-                ),
+                ).insets(insets),
                 LabelLayout(
                     attributedText: .init(
                         string: props.subtitle,
@@ -49,7 +50,7 @@ public final class OnboardingTextLayout: StackLayout<UIView> {
                         ]
                     ),
                     viewReuseId: "\(viewReuseId).subtitle"
-                ),
+                ).insets(insets),
                 SizeLayout<UIButton>(
                     height: 60,
                     viewReuseId: "\(viewReuseId).button",
@@ -67,8 +68,14 @@ public final class OnboardingTextLayout: StackLayout<UIView> {
                             for: .normal
                         )
                     }
-                ).insets(.top(5))
+                ).insets(.top(5).left(40).right(40))
             ]
         )
+    }
+}
+
+extension OnboardingTextLayout.Props {
+    public static var initial: OnboardingTextLayout.Props {
+        .init(title: "", subtitle: "", onNext: .nop)
     }
 }
