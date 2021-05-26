@@ -9,7 +9,7 @@ import LayoutKit
 
 public final class ShadowLayout: InsetLayout<UIView> {
     
-    public init(sublayout: Layout, viewReuseId: String, insets: UIEdgeInsets = .init(16)) {
+    public init(sublayout: Layout, viewReuseId: String, insets: UIEdgeInsets = .init(3)) {
         super.init(
             insets: insets,
             viewReuseId: viewReuseId,
