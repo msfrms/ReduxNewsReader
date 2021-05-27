@@ -24,6 +24,7 @@
 		CFB13D22265B949700A7C1B7 /* ReduxNewsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D21265B949700A7C1B7 /* ReduxNewsReaderTests.swift */; };
 		CFB13D2D265B949700A7C1B7 /* ReduxNewsReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB13D2C265B949700A7C1B7 /* ReduxNewsReaderUITests.swift */; };
 		CFB13D43265B9D9C00A7C1B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB13D3F265B9D9C00A7C1B7 /* Assets.xcassets */; };
+		CFC29E0B265FA65400F1B4E7 /* CategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC29E0A265FA65400F1B4E7 /* CategoryLayout.swift */; };
 		CFD4B2D4265E5D6F003BD352 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D3265E5D6F003BD352 /* CALayerExtensions.swift */; };
 		CFD4B2D6265E639A003BD352 /* OnboardingGridCategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D5265E639A003BD352 /* OnboardingGridCategoryLayout.swift */; };
 		CFD4B2D8265E6AF4003BD352 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D7265E6AF4003BD352 /* OnboardingViewController.swift */; };
@@ -76,6 +77,7 @@
 		CFB13D2E265B949700A7C1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB13D3F265B9D9C00A7C1B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB13D40265B9D9C00A7C1B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFC29E0A265FA65400F1B4E7 /* CategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLayout.swift; sourceTree = "<group>"; };
 		CFD4B2D3265E5D6F003BD352 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		CFD4B2D5265E639A003BD352 /* OnboardingGridCategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGridCategoryLayout.swift; sourceTree = "<group>"; };
 		CFD4B2D7265E6AF4003BD352 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				CF7BAD5D265D2B4A003B18A3 /* Core */,
+				CFC29E08265FA55D00F1B4E7 /* NewsDashboard */,
 				CF7BAD5C265D2720003B18A3 /* Components */,
 				CF7BAD58265D1FA1003B18A3 /* Onboarding */,
 			);
@@ -267,6 +270,22 @@
 				CFB13D40265B9D9C00A7C1B7 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFC29E08265FA55D00F1B4E7 /* NewsDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CFC29E09265FA59200F1B4E7 /* Layout */,
+			);
+			path = NewsDashboard;
+			sourceTree = "<group>";
+		};
+		CFC29E09265FA59200F1B4E7 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				CFC29E0A265FA65400F1B4E7 /* CategoryLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +530,7 @@
 				CF7BAD6D265D379E003B18A3 /* GeometryExtensions.swift in Sources */,
 				CF512FEF265E565700F0AE86 /* ShadowLayout.swift in Sources */,
 				CF7BAD67265D34C7003B18A3 /* Assets.swift in Sources */,
+				CFC29E0B265FA65400F1B4E7 /* CategoryLayout.swift in Sources */,
 				CF7BAD68265D34C7003B18A3 /* Plist.swift in Sources */,
 				CFD4B2D6265E639A003BD352 /* OnboardingGridCategoryLayout.swift in Sources */,
 				CF7BAD61265D2BD7003B18A3 /* OnboardingTextLayout.swift in Sources */,

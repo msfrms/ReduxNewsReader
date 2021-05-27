@@ -28,9 +28,13 @@ internal enum Asset {
     internal static let darkBlue = ColorAsset(name: "Colors/dark blue")
     internal static let lightGray = ColorAsset(name: "Colors/light gray")
   }
+  internal static let debriefingBig = ImageAsset(name: "debriefing-big")
   internal static let debriefing = ImageAsset(name: "debriefing")
+  internal static let gameBig = ImageAsset(name: "game-big")
   internal static let game = ImageAsset(name: "game")
+  internal static let historyBig = ImageAsset(name: "history-big")
   internal static let history = ImageAsset(name: "history")
+  internal static let shapitoBig = ImageAsset(name: "shapito-big")
   internal static let shapito = ImageAsset(name: "shapito")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
