@@ -11,6 +11,7 @@ public final class CategoryLayout: OverlayLayout<UIView> {
     public struct Props {
         public let title: String
         public let image: UIImage
+        public let onTap: Command
     }
     
     public init(props: Props, viewReuseId: String) {
@@ -44,6 +45,6 @@ public final class CategoryLayout: OverlayLayout<UIView> {
 }
 extension CategoryLayout.Props {
     static var initial: CategoryLayout.Props {
-        .init(title: "", image: .init())
+        .init(title: "", image: .init(), onTap: .nop)
     }
 }
