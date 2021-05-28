@@ -9,20 +9,44 @@ import LayoutKit
 
 public final class ShadowLayout: InsetLayout<UIView> {
     
-    public init(sublayout: Layout, viewReuseId: String, insets: UIEdgeInsets = .init(3)) {
+    public enum Styles {
+        public enum Shadow {
+            case black
+            case blue
+        }
+        case shadow(Shadow)
+    }
+    
+    public init(
+        sublayout: Layout,
+        viewReuseId: String,
+        styles: Styles = .shadow(.black),
+        insets: UIEdgeInsets = .init(3)) {
         super.init(
             insets: insets,
             viewReuseId: viewReuseId,
             sublayout: sublayout,
             config: { view in
-                view.layer.applyFigmaShadow(
-                    color: Asset.Colors.black.color,
-                    alpha: 0.44,
-                    x: 0,
-                    y: 16,
-                    blur: 32,
-                    spread: 0
-                )
+                switch styles {
+                case .shadow(.black):
+                    view.layer.applyFigmaShadow(
+                        color: Asset.Colors.black.color,
+                        alpha: 0.44,
+                        x: 0,
+                        y: 16,
+                        blur: 32,
+                        spread: 0
+                    )
+                case .shadow(.blue):
+                    view.layer.applyFigmaShadow(
+                        color: Asset.Colors.black.color,
+                        alpha: 0.06,
+                        x: 0,
+                        y: 10,
+                        blur: 15,
+                        spread: 0
+                    )
+                }
             }
         )
     }
