@@ -27,6 +27,7 @@
 		CFC29E0B265FA65400F1B4E7 /* CategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC29E0A265FA65400F1B4E7 /* CategoryLayout.swift */; };
 		CFC895022660CF3E00090BCD /* NewsCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC895012660CF3E00090BCD /* NewsCategoryListView.swift */; };
 		CFC895042660D1C800090BCD /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC895032660D1C800090BCD /* CategoryCollectionViewCell.swift */; };
+		CFC895082660F48E00090BCD /* NewsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC895072660F48E00090BCD /* NewsLayout.swift */; };
 		CFD4B2D4265E5D6F003BD352 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D3265E5D6F003BD352 /* CALayerExtensions.swift */; };
 		CFD4B2D6265E639A003BD352 /* OnboardingGridCategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D5265E639A003BD352 /* OnboardingGridCategoryLayout.swift */; };
 		CFD4B2D8265E6AF4003BD352 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D7265E6AF4003BD352 /* OnboardingViewController.swift */; };
@@ -82,6 +83,7 @@
 		CFC29E0A265FA65400F1B4E7 /* CategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLayout.swift; sourceTree = "<group>"; };
 		CFC895012660CF3E00090BCD /* NewsCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategoryListView.swift; sourceTree = "<group>"; };
 		CFC895032660D1C800090BCD /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFC895072660F48E00090BCD /* NewsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLayout.swift; sourceTree = "<group>"; };
 		CFD4B2D3265E5D6F003BD352 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		CFD4B2D5265E639A003BD352 /* OnboardingGridCategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGridCategoryLayout.swift; sourceTree = "<group>"; };
 		CFD4B2D7265E6AF4003BD352 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC29E0A265FA65400F1B4E7 /* CategoryLayout.swift */,
+				CFC895072660F48E00090BCD /* NewsLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				CFD4B2D8265E6AF4003BD352 /* OnboardingViewController.swift in Sources */,
 				CF7BAD6B265D3761003B18A3 /* LayoutExtensions.swift in Sources */,
 				CFD4B2DC265E7FED003BD352 /* VerticalEqualSpacingLayout.swift in Sources */,
+				CFC895082660F48E00090BCD /* NewsLayout.swift in Sources */,
 				CF7BAD63265D2CD7003B18A3 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

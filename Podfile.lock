@@ -1,13 +1,18 @@
 PODS:
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
   - LayoutKit (10.1.0)
   - SwiftGen (6.4.0)
 
 DEPENDENCIES:
+  - Kingfisher (~> 5.0)
   - LayoutKit (from `https://github.com/msfrms/LayoutKit`, branch `master`)
   - SwiftGen (~> 6.4.0)
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - SwiftGen
 
 EXTERNAL SOURCES:
@@ -21,9 +26,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/msfrms/LayoutKit
 
 SPEC CHECKSUMS:
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   LayoutKit: 66478bb3af5ce4519a056d9465bc4c7585d2350b
   SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
 
-PODFILE CHECKSUM: 9e47f4fba3ca8363d3b91a282b9f8519bce9186e
+PODFILE CHECKSUM: 94d3cb07030e494488bfac7c0412053bf8971aa2
 
 COCOAPODS: 1.10.1
