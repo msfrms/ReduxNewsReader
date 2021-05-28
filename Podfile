@@ -8,6 +8,8 @@ target 'ReduxNewsReader' do
   pod 'LayoutKit', :git => "https://github.com/msfrms/LayoutKit", :branch => "master"
   pod 'SwiftGen', '~> 6.4.0'
   pod 'Kingfisher', '~> 5.0'
+  pod 'SkeletonView'
+
 
 
   # Pods for ReduxNewsReader
