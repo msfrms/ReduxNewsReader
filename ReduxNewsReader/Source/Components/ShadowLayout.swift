@@ -13,6 +13,7 @@ public final class ShadowLayout: InsetLayout<UIView> {
         public enum Shadow {
             case black
             case blue
+            case card
         }
         case shadow(Shadow)
     }
@@ -45,6 +46,16 @@ public final class ShadowLayout: InsetLayout<UIView> {
                         y: 10,
                         blur: 15,
                         spread: 0
+                    )
+                case .shadow(.card):
+                    view.backgroundColor = .white
+                    view.layer.applyFigmaShadow(
+                        color: Asset.Colors.blue.color,
+                        alpha: 0.06,
+                        x: 0,
+                        y: 10,
+                        blur: 15,
+                        spread: 5
                     )
                 }
             }
