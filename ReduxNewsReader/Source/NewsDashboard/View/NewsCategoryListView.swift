@@ -45,6 +45,7 @@ public class NewsCategoryListView: UIView {
         collectionView.decelerationRate = .fast
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.contentInset = .left(40).right(40)
         addSubview(collectionView)
         
         backgroundColor = .clear

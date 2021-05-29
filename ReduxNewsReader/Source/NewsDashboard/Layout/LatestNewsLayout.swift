@@ -39,7 +39,7 @@ public final class LatestNewsLayout: StackLayout<UIView> {
                             .init(
                                 string: "Все",
                                 attributes: [
-                                    .font: UIFont.systemFont(ofSize: 20, weight: .heavy),
+                                    .font: UIFont.systemFont(ofSize: 20, weight: .medium),
                                     .foregroundColor: Asset.Colors.blue.color
                                 ]
                             ),
