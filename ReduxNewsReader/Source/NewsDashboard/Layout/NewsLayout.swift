@@ -71,15 +71,7 @@ public final class NewsLayout: StackLayout<UIView> {
                         view.backgroundColor = Asset.Colors.darkGray.color
                     }
                 ),
-                StackLayout(
-                    axis: .vertical,
-                    distribution: .fillEqualSpacing,
-                    sublayouts: [
-                        SizeLayout(height: 1),
-                        texts,
-                        SizeLayout(height: 1)
-                    ]
-                )
+                texts.center(axis: .vertical)
             ],
             config: { view in
                 view.layer.cornerRadius = 16
