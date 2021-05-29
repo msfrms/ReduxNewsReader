@@ -11,7 +11,7 @@ public final class OnboardingTextLayout: StackLayout<UIView> {
     public struct Props {
         public let title: String
         public let subtitle: String
-        public let onNext: CommandWith<UIViewController>
+        public let onNext: Command
     }
     
     public init(props: Props, viewReuseId: String) {
@@ -67,6 +67,17 @@ public final class OnboardingTextLayout: StackLayout<UIView> {
                             ),
                             for: .normal
                         )
+                        button.setAttributedTitle(
+                            .init(
+                                string: "NEXT",
+                                attributes: [
+                                    .font: UIFont.systemFont(ofSize: 16, weight: .regular),
+                                    .foregroundColor: UIColor.white.withAlphaComponent(0.3)
+                                ]
+                            ),
+                            for: .highlighted
+                        )
+                        button.add(command: props.onNext, event: .touchUpInside)
                     }
                 ).insets(.top(5).left(40).right(40))
             ]

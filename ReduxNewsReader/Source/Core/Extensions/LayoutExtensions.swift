@@ -11,4 +11,16 @@ public extension Layout {
     func insets(_ insets: UIEdgeInsets) -> Layout {
         InsetLayout(insets: insets, sublayout: self)
     }
+    
+    func center(axis: Axis) -> Layout {
+        return StackLayout(
+            axis: axis,
+            distribution: .fillEqualSpacing,
+            sublayouts: [
+                SizeLayout(width: 1, height: 1),
+                self,
+                SizeLayout(width: 1, height: 1),
+            ]
+        )
+    }
 }
