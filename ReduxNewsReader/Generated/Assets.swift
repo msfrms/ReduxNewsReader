@@ -36,6 +36,8 @@ internal enum Asset {
   internal static let game = ImageAsset(name: "game")
   internal static let historyBig = ImageAsset(name: "history-big")
   internal static let history = ImageAsset(name: "history")
+  internal static let noInternet = ImageAsset(name: "no-internet")
+  internal static let poorConnection = ImageAsset(name: "poor-connection")
   internal static let shapitoBig = ImageAsset(name: "shapito-big")
   internal static let shapito = ImageAsset(name: "shapito")
 }
