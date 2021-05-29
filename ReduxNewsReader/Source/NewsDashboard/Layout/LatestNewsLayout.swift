@@ -45,6 +45,16 @@ public final class LatestNewsLayout: StackLayout<UIView> {
                             ),
                             for: .normal
                         )
+                        view.setAttributedTitle(
+                            .init(
+                                string: "Все",
+                                attributes: [
+                                    .font: UIFont.systemFont(ofSize: 20, weight: .medium),
+                                    .foregroundColor: Asset.Colors.blue.color.withAlphaComponent(0.3)
+                                ]
+                            ),
+                            for: .highlighted
+                        )
                     }
                 )
             ]
