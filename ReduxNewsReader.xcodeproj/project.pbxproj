@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		548DB001927D74CEC3D8883B /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */; };
 		62A975A59148D1BE81579B69 /* Pods_ReduxNewsReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EB67BD01DEF5DC7B42DC60 /* Pods_ReduxNewsReader.framework */; };
+		CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */; };
 		CF512FEF265E565700F0AE86 /* ShadowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF512FEE265E565700F0AE86 /* ShadowLayout.swift */; };
 		CF7BAD5B265D1FD0003B18A3 /* PageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BAD5A265D1FD0003B18A3 /* PageLayout.swift */; };
 		CF7BAD61265D2BD7003B18A3 /* OnboardingTextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BAD60265D2BD7003B18A3 /* OnboardingTextLayout.swift */; };
@@ -31,6 +32,7 @@
 		CFC8950A2660FD2000090BCD /* LatestNewsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC895092660FD2000090BCD /* LatestNewsLayout.swift */; };
 		CFC8950C266101C100090BCD /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC8950B266101C100090BCD /* ArrayExtensions.swift */; };
 		CFC8950E2661033500090BCD /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC8950D2661033500090BCD /* UIButtonExtensions.swift */; };
+		CFC8951026612A3F00090BCD /* NewsDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC8950F26612A3F00090BCD /* NewsDashboardViewController.swift */; };
 		CFD4B2D4265E5D6F003BD352 /* CALayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D3265E5D6F003BD352 /* CALayerExtensions.swift */; };
 		CFD4B2D6265E639A003BD352 /* OnboardingGridCategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D5265E639A003BD352 /* OnboardingGridCategoryLayout.swift */; };
 		CFD4B2D8265E6AF4003BD352 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4B2D7265E6AF4003BD352 /* OnboardingViewController.swift */; };
@@ -62,6 +64,7 @@
 		6F8F996E77B788B190A0BD15 /* Pods_ReduxNewsReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EFD4898BEE23E5BD810E2C /* Pods-ReduxNewsReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReader.debug.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader.debug.xcconfig"; sourceTree = "<group>"; };
 		CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsLoadingView.swift; sourceTree = "<group>"; };
 		CF512FEE265E565700F0AE86 /* ShadowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayout.swift; sourceTree = "<group>"; };
 		CF7BAD5A265D1FD0003B18A3 /* PageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout.swift; sourceTree = "<group>"; };
 		CF7BAD60265D2BD7003B18A3 /* OnboardingTextLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextLayout.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		CFC895092660FD2000090BCD /* LatestNewsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsLayout.swift; sourceTree = "<group>"; };
 		CFC8950B266101C100090BCD /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		CFC8950D2661033500090BCD /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		CFC8950F26612A3F00090BCD /* NewsDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDashboardViewController.swift; sourceTree = "<group>"; };
 		CFD4B2D3265E5D6F003BD352 /* CALayerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtensions.swift; sourceTree = "<group>"; };
 		CFD4B2D5265E639A003BD352 /* OnboardingGridCategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGridCategoryLayout.swift; sourceTree = "<group>"; };
 		CFD4B2D7265E6AF4003BD352 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 			children = (
 				CFC895002660CF1E00090BCD /* View */,
 				CFC29E09265FA59200F1B4E7 /* Layout */,
+				CFC8950F26612A3F00090BCD /* NewsDashboardViewController.swift */,
 			);
 			path = NewsDashboard;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			children = (
 				CFC895012660CF3E00090BCD /* NewsCategoryListView.swift */,
 				CFC895032660D1C800090BCD /* CategoryCollectionViewCell.swift */,
+				CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				CF512FEF265E565700F0AE86 /* ShadowLayout.swift in Sources */,
 				CF7BAD67265D34C7003B18A3 /* Assets.swift in Sources */,
 				CFC8950C266101C100090BCD /* ArrayExtensions.swift in Sources */,
+				CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */,
 				CFC29E0B265FA65400F1B4E7 /* CategoryLayout.swift in Sources */,
 				CF7BAD68265D34C7003B18A3 /* Plist.swift in Sources */,
 				CFC895022660CF3E00090BCD /* NewsCategoryListView.swift in Sources */,
@@ -567,6 +574,7 @@
 				CFB13D0F265B949600A7C1B7 /* ViewController.swift in Sources */,
 				CFD4B2D4265E5D6F003BD352 /* CALayerExtensions.swift in Sources */,
 				CFB13D0B265B949600A7C1B7 /* AppDelegate.swift in Sources */,
+				CFC8951026612A3F00090BCD /* NewsDashboardViewController.swift in Sources */,
 				CFB13D0D265B949600A7C1B7 /* SceneDelegate.swift in Sources */,
 				CFC8950A2660FD2000090BCD /* LatestNewsLayout.swift in Sources */,
 				CFD4B2D8265E6AF4003BD352 /* OnboardingViewController.swift in Sources */,

@@ -17,9 +17,14 @@ public final class CategoryLayout: OverlayLayout<UIView> {
     public init(props: Props, viewReuseId: String) {
         super.init(
             primaryLayouts: [
-                SizeLayout<UIImageView>(width: 236, height: 273, config: { view in
-                    view.image = props.image
-                })
+                SizeLayout<UIImageView>(
+                    width: 236,
+                    height: 273,
+                    viewReuseId: "\(viewReuseId).cover",
+                    config: { view in
+                        view.image = props.image
+                    }
+                )
             ],
             overlayLayouts: [
                 StackLayout(
@@ -35,7 +40,8 @@ public final class CategoryLayout: OverlayLayout<UIView> {
                                     .kern: 1,
                                     .foregroundColor: UIColor.white
                                 ]
-                            )
+                            ),
+                            viewReuseId: "\(viewReuseId).title"
                         ).insets(.left(25).bottom(31))
                     ]
                 ),
