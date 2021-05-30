@@ -12,6 +12,7 @@ public class NewsDashboardViewController: UIViewController {
         public enum LatestNews {
             case inProgress
             case loaded(LatestNewsLayout.Props)
+            case empty(CardEmptyLayout.Props)
         }
         public let header: String
         public let categories: NewsCategoryListView.Props
@@ -56,12 +57,19 @@ public class NewsDashboardViewController: UIViewController {
                     props: props,
                     viewReuseId: "\(rootViewReuseId).latest.news.loaded"
                 ).insets(.left(40).right(40))
+                
             case .inProgress:
                 return SizeLayout<LatestNewsLoadingView>(
                     width: view.bounds.width,
                     viewReuseId: "\(rootViewReuseId).latest.news.loading",
                     config: { _ in }
                 )
+                
+            case .empty(let props):
+                return CardEmptyLayout(
+                    props: props,
+                    viewReuseId: "\(rootViewReuseId).latest.news.empty"
+                ).insets(.left(40).right(40))
             }
         }
         
