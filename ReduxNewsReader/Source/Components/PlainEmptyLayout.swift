@@ -108,7 +108,8 @@ public final class PlainEmptyLayout: InsetLayout<UIView> {
                         }
                     ).insets(.top(10))
                 ]
-            )
+            ),
+            config: { _ in }
         )
     }
 }
