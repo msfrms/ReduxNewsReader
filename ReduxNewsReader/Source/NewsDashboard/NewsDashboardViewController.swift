@@ -29,6 +29,8 @@ public class NewsDashboardViewController: UIViewController {
         view.addSubview(scrollView)
         
         scrollView.pin(to: view.safeAreaLayoutGuide)
+        scrollView.frame = view.bounds
+        scrollView.showsVerticalScrollIndicator = false
     }
     
     public override func viewDidAppear(_ animated: Bool) {
@@ -41,8 +43,6 @@ public class NewsDashboardViewController: UIViewController {
         
         let safeAreaInsets = view.safeAreaInsets
         
-        scrollView.frame = view.bounds
-        scrollView.showsVerticalScrollIndicator = false
         scrollView.contentInset = .init(
             top: safeAreaInsets.top,
             left: 0,
