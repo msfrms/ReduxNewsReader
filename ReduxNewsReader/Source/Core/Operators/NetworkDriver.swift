@@ -18,7 +18,7 @@ public class NetworkDriver {
         let requests: NetworkOperator.Props = [
             NewsListRequests.latestNews(state: state, dispatcher: dispatcher),
             NewsListRequests.list(state: state, dispatcher: dispatcher),
-            NewsDetailRequests.detail(state: state, dispatcher: dispatcher)
+            NewsCardRequests.detail(state: state, dispatcher: dispatcher)
         ].compactMap { $0 }
 
         

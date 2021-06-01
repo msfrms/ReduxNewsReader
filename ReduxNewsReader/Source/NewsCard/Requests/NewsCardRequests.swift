@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum NewsDetailRequests {
+public enum NewsCardRequests {
     public static func detail(
         state: AppState,
         dispatcher: Dispatcher) -> NetworkOperator.Request? {
