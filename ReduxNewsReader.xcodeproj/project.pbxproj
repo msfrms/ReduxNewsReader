@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		548DB001927D74CEC3D8883B /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */; };
 		62A975A59148D1BE81579B69 /* Pods_ReduxNewsReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EB67BD01DEF5DC7B42DC60 /* Pods_ReduxNewsReader.framework */; };
+		CF1E05802666470700A98FAF /* NetworkOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E057F2666470700A98FAF /* NetworkOperator.swift */; };
+		CF1E05822666475A00A98FAF /* NetworkDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05812666475A00A98FAF /* NetworkDriver.swift */; };
+		CF1E0584266647A600A98FAF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E0583266647A600A98FAF /* Store.swift */; };
+		CF1E05872666483600A98FAF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05862666483600A98FAF /* AppState.swift */; };
 		CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */; };
 		CF2CE48326624587007E12B1 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48226624587007E12B1 /* NewsListViewController.swift */; };
 		CF2CE48526627A73007E12B1 /* CardEmptyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */; };
@@ -72,6 +76,10 @@
 		6F8F996E77B788B190A0BD15 /* Pods_ReduxNewsReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EFD4898BEE23E5BD810E2C /* Pods-ReduxNewsReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxNewsReader.debug.xcconfig"; path = "Target Support Files/Pods-ReduxNewsReader/Pods-ReduxNewsReader.debug.xcconfig"; sourceTree = "<group>"; };
 		CA9592462C61D55C5E9F7141 /* Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxNewsReader_ReduxNewsReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1E057F2666470700A98FAF /* NetworkOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperator.swift; sourceTree = "<group>"; };
+		CF1E05812666475A00A98FAF /* NetworkDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDriver.swift; sourceTree = "<group>"; };
+		CF1E0583266647A600A98FAF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		CF1E05862666483600A98FAF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsLoadingView.swift; sourceTree = "<group>"; };
 		CF2CE48226624587007E12B1 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEmptyLayout.swift; sourceTree = "<group>"; };
@@ -172,6 +180,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CF1E057E266646D800A98FAF /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E057F2666470700A98FAF /* NetworkOperator.swift */,
+				CF1E05812666475A00A98FAF /* NetworkDriver.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
+		CF1E05852666482A00A98FAF /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E05862666483600A98FAF /* AppState.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
 		CF2CE4812662456D007E12B1 /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +235,7 @@
 		CF7BAD57265D1F91003B18A3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E05852666482A00A98FAF /* Redux */,
 				CF7BAD5D265D2B4A003B18A3 /* Core */,
 				CF7BAD5C265D2720003B18A3 /* Components */,
 				CF2CE48F2663787D007E12B1 /* NewsDetail */,
@@ -253,8 +279,10 @@
 		CF7BAD5D265D2B4A003B18A3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E057E266646D800A98FAF /* Operators */,
 				CF7BAD69265D3751003B18A3 /* Extensions */,
 				CF7BAD62265D2CD7003B18A3 /* Command.swift */,
+				CF1E0583266647A600A98FAF /* Store.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -616,6 +644,7 @@
 				CF2CE48526627A73007E12B1 /* CardEmptyLayout.swift in Sources */,
 				CF7BAD5B265D1FD0003B18A3 /* PageLayout.swift in Sources */,
 				CFD4B2DA265E70FA003BD352 /* UIViewExtensions.swift in Sources */,
+				CF1E0584266647A600A98FAF /* Store.swift in Sources */,
 				CFC8950E2661033500090BCD /* UIButtonExtensions.swift in Sources */,
 				CF7BAD6D265D379E003B18A3 /* GeometryExtensions.swift in Sources */,
 				CF512FEF265E565700F0AE86 /* ShadowLayout.swift in Sources */,
@@ -633,13 +662,16 @@
 				CFB13D0F265B949600A7C1B7 /* ViewController.swift in Sources */,
 				CFD4B2D4265E5D6F003BD352 /* CALayerExtensions.swift in Sources */,
 				CFB13D0B265B949600A7C1B7 /* AppDelegate.swift in Sources */,
+				CF1E05802666470700A98FAF /* NetworkOperator.swift in Sources */,
 				CF2CE48C266356DF007E12B1 /* NewsCollectionViewCell.swift in Sources */,
 				CFC8951026612A3F00090BCD /* NewsDashboardViewController.swift in Sources */,
 				CFB13D0D265B949600A7C1B7 /* SceneDelegate.swift in Sources */,
 				CFC8950A2660FD2000090BCD /* LatestNewsLayout.swift in Sources */,
 				CF2CE48E26637806007E12B1 /* StringExtensions.swift in Sources */,
 				CFD4B2D8265E6AF4003BD352 /* OnboardingViewController.swift in Sources */,
+				CF1E05822666475A00A98FAF /* NetworkDriver.swift in Sources */,
 				CF7BAD6B265D3761003B18A3 /* LayoutExtensions.swift in Sources */,
+				CF1E05872666483600A98FAF /* AppState.swift in Sources */,
 				CF2CE48A2662953B007E12B1 /* NewsListLoadingView.swift in Sources */,
 				CFD4B2DC265E7FED003BD352 /* VerticalEqualSpacingLayout.swift in Sources */,
 				CFC895082660F48E00090BCD /* NewsLayout.swift in Sources */,

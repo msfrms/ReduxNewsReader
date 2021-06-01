@@ -1,0 +1,99 @@
+//
+//  Store.swift
+//  ReduxNewsReader
+//
+//  Created by Mikhail Radaev on 01.06.2021.
+//
+
+import Foundation
+
+// for cache pure function
+/*
+ uses:
+ func mapToProps(_ state: AppState) -> Props { ... }
+ let cacheMapToProps: (AppState) -> Props = memoizedF(mapToProps)
+ */
+public func memoizedF<In: Hashable, Out>(_ f: @escaping (In) -> Out) -> (In) -> Out {
+    var cache: [In: Out] = [:]
+    return { input in
+        cache[input] ?? {
+            let result = f(input)
+            cache[input] = result
+            return result
+        }()
+    }
+}
+
+public protocol Action {}
+
+public protocol Dispatcher {
+    func dispatch(action: Action)
+}
+
+public typealias Reducer<State> = (State, Action) -> State
+
+public typealias Middleware<State> = (State, Action, Dispatcher) -> Void
+
+extension CommandWith: Hashable {
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(ObjectIdentifier(self))
+    }
+
+    public static func == (lhs: CommandWith<T>, rhs: CommandWith<T>) -> Bool {
+        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
+    }
+}
+
+public final class Store<State>: Dispatcher {
+
+    public private(set) var state: State
+    private let reducer: Reducer<State>
+    private let queue: DispatchQueue
+    private var commands: Set<CommandWith<State>> = []
+    private let middleware: Middleware<State>
+
+    public init(queue: DispatchQueue,
+                initialState: State,
+                reducer: @escaping Reducer<State>,
+                middleware: @escaping Middleware<State> = { _, _, _ in }) {
+        self.reducer = reducer
+        self.state = initialState
+        self.queue = queue
+        self.middleware = middleware
+    }
+
+    public convenience init(initialState: State,
+                            reducer: @escaping Reducer<State>,
+                            middleware: @escaping Middleware<State> = { _, _, _ in }) {
+        self.init(queue: DispatchQueue(label: "private store queue"),
+                  initialState: initialState,
+                  reducer: reducer,
+                  middleware: middleware)
+    }
+
+    @discardableResult
+    public func subscribe(command: CommandWith<State>) -> Command {
+        queue.async {
+            self.commands.insert(command)
+            command.execute(value: self.state)
+        }
+        return Command(id: "stop observing for \(command)") {
+            self.commands.remove(command)
+        }.observe(queue: queue)
+    }
+
+    public func setState(_ state: State) {
+        self.state = state
+        commands.forEach { $0.execute(value: state) }
+    }
+
+    public func dispatch(action: Action) {
+        queue.async {
+            let newState = self.reducer(self.state, action)
+            self.state = newState
+            self.commands.forEach { $0.execute(value: self.state) }
+            self.middleware(newState, action, self)
+        }
+    }
+}
