@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class NewsDetailViewController: UIViewController {
+public class NewsCardViewController: UIViewController {
     
     private let scrollView = UIScrollView()
     
@@ -22,9 +22,9 @@ public class NewsDetailViewController: UIViewController {
         scrollView.backgroundColor = Asset.Colors.lightGray.color
     }
 
-    public func render(props: NewsDetailLayout.Props) {
+    public func render(props: NewsCardLayout.Props) {
         
-        let main = NewsDetailLayout(
+        let main = NewsCardLayout(
             props: props,
             viewReuseId: "news.detail"
         )

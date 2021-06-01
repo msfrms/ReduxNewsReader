@@ -8,7 +8,7 @@
 import LayoutKit
 import Kingfisher
 
-public class NewsDetailLayout: StackLayout<UIView> {
+public class NewsCardLayout: StackLayout<UIView> {
 
     public struct Props {
         public let coverUrl: URL?
