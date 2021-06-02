@@ -17,8 +17,34 @@ public struct NewsListState {
     public let byCategory: [NewsCategory: NewsListFlowState]
     
     public func reduce(action: Action) -> NewsListState {
-        // TODO: реализовать reduce
-        return self
+        switch action {
+        case NewsListAction.newsListByCategory(let category, .failed):
+            let state = NewsListFlowState(
+                ids: [],
+                request: byCategory[category]?.request,
+                status: .failed
+            )
+            return .init(byCategory: byCategory + (category, state))
+            
+        case NewsListAction.newsListByCategory(let category, .loaded(let news)):
+            let state = NewsListFlowState(
+                ids: news.map { $0.id },
+                request: byCategory[category]?.request,
+                status: .success
+            )
+            return .init(byCategory: byCategory + (category, state))
+            
+        case NewsListAction.newsListByCategory(let category, .start):
+            let state = NewsListFlowState(
+                ids: [],
+                request: UUID(),
+                status: .inProgress
+            )
+            return .init(byCategory: byCategory + (category, state))
+            
+        default:
+            return self
+        }
     }
 }
 
