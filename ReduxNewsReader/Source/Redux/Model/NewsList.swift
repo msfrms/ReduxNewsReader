@@ -12,7 +12,7 @@ public struct NewsList {
         public let value: String
     }
     public let id: Id
-    public let coverUrl: URL
+    public let coverUrl: URL?
     public let title: String
     public let description: String
 }
