@@ -13,6 +13,16 @@ public struct AppState {
     public let newsCard: NewsCardState
     public let newsListAll: NewsListAllState
     public let newsCardAll: NewsListCardAllState
+    
+    public func reduce(action: Action) -> AppState {
+        AppState(
+            newsList: newsList.reduce(action: action),
+            newsLatest: newsLatest.reduce(action: action),
+            newsCard: newsCard.reduce(action: action),
+            newsListAll: newsListAll.reduce(action: action),
+            newsCardAll: newsCardAll.reduce(action: action)
+        )
+    }
 }
 
 extension AppState {

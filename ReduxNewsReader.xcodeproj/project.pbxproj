@@ -26,6 +26,9 @@
 		CF1E05A026666B3200A98FAF /* NewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E059F26666B3200A98FAF /* NewsCard.swift */; };
 		CF1E05A226666E9700A98FAF /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A126666E9700A98FAF /* NewsCategory.swift */; };
 		CF1E05A42666708100A98FAF /* NewsListCardAllState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A32666708100A98FAF /* NewsListCardAllState.swift */; };
+		CF1E05A7266783C100A98FAF /* NewsListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A6266783C100A98FAF /* NewsListAction.swift */; };
+		CF1E05A926678C2200A98FAF /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */; };
+		CF1E05AB26678E0600A98FAF /* NewsCardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */; };
 		CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */; };
 		CF2CE48326624587007E12B1 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48226624587007E12B1 /* NewsListViewController.swift */; };
 		CF2CE48526627A73007E12B1 /* CardEmptyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */; };
@@ -106,6 +109,9 @@
 		CF1E059F26666B3200A98FAF /* NewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCard.swift; sourceTree = "<group>"; };
 		CF1E05A126666E9700A98FAF /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
 		CF1E05A32666708100A98FAF /* NewsListCardAllState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCardAllState.swift; sourceTree = "<group>"; };
+		CF1E05A6266783C100A98FAF /* NewsListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListAction.swift; sourceTree = "<group>"; };
+		CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
+		CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardAction.swift; sourceTree = "<group>"; };
 		CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsLoadingView.swift; sourceTree = "<group>"; };
 		CF2CE48226624587007E12B1 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEmptyLayout.swift; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 		CF1E05852666482A00A98FAF /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E05A5266783AC00A98FAF /* Actions */,
 				CF1E059A2666649A00A98FAF /* Model */,
 				CF1E05862666483600A98FAF /* AppState.swift */,
 				CF1E05922666620B00A98FAF /* NewsListState.swift */,
@@ -255,6 +262,15 @@
 				CF1E05A126666E9700A98FAF /* NewsCategory.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CF1E05A5266783AC00A98FAF /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E05A6266783C100A98FAF /* NewsListAction.swift */,
+				CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		CF2CE4812662456D007E12B1 /* NewsList */ = {
@@ -370,6 +386,7 @@
 				CFC8950D2661033500090BCD /* UIButtonExtensions.swift */,
 				CF2CE48D26637806007E12B1 /* StringExtensions.swift */,
 				CF1E058D26665AE600A98FAF /* HTTPURLResponseExtensions.swift */,
+				CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -717,8 +734,10 @@
 				CF7BAD67265D34C7003B18A3 /* Assets.swift in Sources */,
 				CFC8950C266101C100090BCD /* ArrayExtensions.swift in Sources */,
 				CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */,
+				CF1E05AB26678E0600A98FAF /* NewsCardAction.swift in Sources */,
 				CFC29E0B265FA65400F1B4E7 /* CategoryLayout.swift in Sources */,
 				CF2CE4872662801E007E12B1 /* PlainEmptyLayout.swift in Sources */,
+				CF1E05A926678C2200A98FAF /* DictionaryExtensions.swift in Sources */,
 				CF7BAD68265D34C7003B18A3 /* Plist.swift in Sources */,
 				CFC895022660CF3E00090BCD /* NewsCategoryListView.swift in Sources */,
 				CFD4B2D6265E639A003BD352 /* OnboardingGridCategoryLayout.swift in Sources */,
@@ -752,6 +771,7 @@
 				CFD4B2DC265E7FED003BD352 /* VerticalEqualSpacingLayout.swift in Sources */,
 				CFC895082660F48E00090BCD /* NewsLayout.swift in Sources */,
 				CF7BAD63265D2CD7003B18A3 /* Command.swift in Sources */,
+				CF1E05A7266783C100A98FAF /* NewsListAction.swift in Sources */,
 				CF2CE48326624587007E12B1 /* NewsListViewController.swift in Sources */,
 				CF2CE492266378B9007E12B1 /* NewsCardLayout.swift in Sources */,
 			);
