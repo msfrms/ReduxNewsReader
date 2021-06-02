@@ -29,6 +29,7 @@
 		CF1E05A7266783C100A98FAF /* NewsListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A6266783C100A98FAF /* NewsListAction.swift */; };
 		CF1E05A926678C2200A98FAF /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */; };
 		CF1E05AB26678E0600A98FAF /* NewsCardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */; };
+		CF1E05AE2667C54D00A98FAF /* NewsCardLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05AD2667C54D00A98FAF /* NewsCardLoadingView.swift */; };
 		CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */; };
 		CF2CE48326624587007E12B1 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48226624587007E12B1 /* NewsListViewController.swift */; };
 		CF2CE48526627A73007E12B1 /* CardEmptyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */; };
@@ -112,6 +113,7 @@
 		CF1E05A6266783C100A98FAF /* NewsListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListAction.swift; sourceTree = "<group>"; };
 		CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardAction.swift; sourceTree = "<group>"; };
+		CF1E05AD2667C54D00A98FAF /* NewsCardLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardLoadingView.swift; sourceTree = "<group>"; };
 		CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsLoadingView.swift; sourceTree = "<group>"; };
 		CF2CE48226624587007E12B1 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEmptyLayout.swift; sourceTree = "<group>"; };
@@ -273,6 +275,14 @@
 			path = Actions;
 			sourceTree = "<group>";
 		};
+		CF1E05AC2667C53F00A98FAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E05AD2667C54D00A98FAF /* NewsCardLoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF2CE4812662456D007E12B1 /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		CF2CE48F2663787D007E12B1 /* NewsCard */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E05AC2667C53F00A98FAF /* View */,
 				CF1E058F26665C2100A98FAF /* Requests */,
 				CF2CE490266378AB007E12B1 /* Layout */,
 				CF2CE4932663BEEF007E12B1 /* NewsCardViewController.swift */,
@@ -747,6 +758,7 @@
 				CF1E058C26665A3200A98FAF /* Response.swift in Sources */,
 				CF1E059C266664A600A98FAF /* NewsList.swift in Sources */,
 				CFD4B2D4265E5D6F003BD352 /* CALayerExtensions.swift in Sources */,
+				CF1E05AE2667C54D00A98FAF /* NewsCardLoadingView.swift in Sources */,
 				CFB13D0B265B949600A7C1B7 /* AppDelegate.swift in Sources */,
 				CF1E05A42666708100A98FAF /* NewsListCardAllState.swift in Sources */,
 				CF1E05802666470700A98FAF /* NetworkOperator.swift in Sources */,
