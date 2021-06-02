@@ -11,8 +11,16 @@ public struct NewsListAllState {
     public let byId: [NewsList.Id: NewsList]
     
     public func reduce(action: Action) -> NewsListAllState {
-        // TODO: реализовать reduce
-        return self
+        switch action {
+        case NewsListAction.latestNews(.loaded(let news)), NewsListAction.newsListByCategory(_, .loaded(let news)):
+            var ids = byId
+            for new in news {
+                ids[new.id] = new
+            }
+            return .init(byId: ids)
+        default:
+            return self
+        }
     }
 }
 

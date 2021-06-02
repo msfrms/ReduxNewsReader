@@ -13,8 +13,20 @@ public struct NewsLatestState {
     public let status: Status
     
     public func reduce(action: Action) -> NewsLatestState {
-        // TODO: реализовать reduce
-        return self
+        switch action {
+        case NewsListAction.latestNews(.start):
+            return .init(ids: [], request: UUID(), status: .inProgress)
+            
+        case NewsListAction.latestNews(.failed):
+            return .init(ids: [], request: request, status: .failed)
+            
+        case NewsListAction.latestNews(.loaded(let news)), NewsListAction.newsListByCategory(.history, .loaded(let news)):
+            let newsIds = news[..<4].map { $0.id }
+            return .init(ids: newsIds, request: request, status: .success)
+            
+        default:
+            return self
+        }
     }
 }
 
