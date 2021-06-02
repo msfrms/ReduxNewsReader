@@ -16,8 +16,28 @@ public struct NewsCardState {
     public let byId: [NewsCard.Id: NewsCardFlowState]
     
     public func reduce(action: Action) -> NewsCardState {
-        // TODO: реализовать reduce
-        return self
+        switch action {
+        case NewsCardAction.start(let newsId):
+            let state = NewsCardFlowState(request: UUID(), status: .inProgress)
+            return .init(byId: byId + (newsId, state))
+
+        case NewsCardAction.failed(let newsId):
+            let state = NewsCardFlowState(
+                request: byId[newsId]?.request,
+                status: .failed
+            )
+            return .init(byId: byId + (newsId, state))
+        
+        case NewsCardAction.loaded(let news):
+            let state = NewsCardFlowState(
+                request: byId[news.id]?.request,
+                status: .success
+            )
+            return .init(byId: byId + (news.id, state))
+            
+        default:
+            return self
+        }
     }
 }
 
