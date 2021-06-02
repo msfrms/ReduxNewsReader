@@ -19,7 +19,12 @@ public class NewsCardLayout: StackLayout<UIView> {
         public let content: String
     }
     
-    public init(props: Props, viewReuseId: String) {
+    public enum Styles {
+        case forLoading
+        case forPresent
+    }
+    
+    public init(props: Props, viewReuseId: String, styles: Styles = .forPresent) {
         
         let sourceLayout = StackLayout(
             axis: .vertical,
@@ -29,12 +34,22 @@ public class NewsCardLayout: StackLayout<UIView> {
                 LabelLayout(
                     attributedText: .init(
                         string: "Источник: \(props.source)",
-                        attributes: [
-                            .font: UIFont.systemFont(ofSize: 14, weight: .medium),
-                            .foregroundColor: Asset.Colors.black.color,
-                            .underlineStyle: NSUnderlineStyle.single.rawValue,
-                            .underlineColor: Asset.Colors.black.color,
-                        ]
+                        attributes: {
+                            switch styles {
+                            case .forPresent:
+                                return [
+                                    .font: UIFont.systemFont(ofSize: 14, weight: .medium),
+                                    .foregroundColor: Asset.Colors.black.color,
+                                    .underlineStyle: NSUnderlineStyle.single.rawValue,
+                                    .underlineColor: Asset.Colors.black.color,
+                                ]
+                            case .forLoading:
+                                return [
+                                    .font: UIFont.systemFont(ofSize: 14, weight: .medium),
+                                    .foregroundColor: Asset.Colors.black.color,
+                                ]
+                            }
+                        }()
                     ),
                     viewReuseId: "\(viewReuseId).source.title"
                 ),
@@ -43,9 +58,7 @@ public class NewsCardLayout: StackLayout<UIView> {
                         string: props.date,
                         attributes: [
                             .font: UIFont.systemFont(ofSize: 14, weight: .medium),
-                            .foregroundColor: Asset.Colors.black.color,
-                            .underlineStyle: NSUnderlineStyle.single.rawValue,
-                            .underlineColor: Asset.Colors.black.color,
+                            .foregroundColor: Asset.Colors.black.color
                         ]
                     ),
                     viewReuseId: "\(viewReuseId).source.date"
