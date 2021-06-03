@@ -15,12 +15,10 @@ public class NetworkDriver {
     }
 
     public func observe(state: AppState, dispatcher: Dispatcher) {
-        var requests: NetworkOperator.Props = [
-            NewsListRequests.latestNews(state: state, dispatcher: dispatcher)
-        ].compactMap { $0 }
-        
-        requests += NewsListRequests.list(state: state, dispatcher: dispatcher)
-        requests += NewsCardRequests.card(state: state, dispatcher: dispatcher)
+        let requests: NetworkOperator.Props = [
+            NewsListRequests.list(state: state, dispatcher: dispatcher),
+            NewsCardRequests.card(state: state, dispatcher: dispatcher)
+        ].flatMap { $0 }
         
         networkOperator.process(props: requests)
     }

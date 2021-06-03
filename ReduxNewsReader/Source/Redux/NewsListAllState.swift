@@ -12,7 +12,7 @@ public struct NewsListAllState {
     
     public func reduce(action: Action) -> NewsListAllState {
         switch action {
-        case NewsListAction.latestNews(.loaded(let news)), NewsListAction.newsListByCategory(_, .loaded(let news)):
+        case NewsListAction.newsListByCategory(_, .loaded(let news, _)):
             var ids = byId
             for new in news {
                 ids[new.id] = new
