@@ -12,7 +12,7 @@ public enum NewsListRequests {
     private struct ListNewsResponse: Decodable {
         struct DocumentResponse: Decodable {
             let title: String
-            let second_title: String
+            let second_title: String?
             let share_image_url: String?
         }
         let documents: [String: DocumentResponse]
@@ -28,7 +28,7 @@ public enum NewsListRequests {
                         id: .init(value: id),
                         coverUrl: $0.share_image_url.flatMap { URL(string: $0) },
                         title: $0.title,
-                        description: $0.second_title
+                        description: $0.second_title ?? ""
                     )
                 }
             }
@@ -41,7 +41,11 @@ public enum NewsListRequests {
         
         state.newsList.byCategory.map { category, state in
             let categoryNews = category.rawValue
-            let request = URLRequest(url: URL(string: "https://meduza.io/api/v3/search?chrono=\(categoryNews)&locale=ru&page=0&per_page=24")!)
+            let request = URLRequest(
+                url: URL(
+                    string: "https://meduza.io/api/v3/search?chrono=\(categoryNews)&locale=ru&page=\(state.page)&per_page=24"
+                )!
+            )
             
             guard let id = state.request else {
                 return nil
