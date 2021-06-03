@@ -7,7 +7,7 @@
 
 import LayoutKit
 
-public class NewsDashboardViewController: UIViewController {
+public class NewsDashboardViewController: BaseViewController {
     public struct Props {
         public enum LatestNews {
             case inProgress

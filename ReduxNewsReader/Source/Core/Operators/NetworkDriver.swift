@@ -23,3 +23,12 @@ public class NetworkDriver {
         networkOperator.process(props: requests)
     }
 }
+
+extension NetworkDriver {
+
+    func asSubscriber(with dispatcher: Dispatcher) -> CommandWith<AppState> {
+        CommandWith { state in
+            self.observe(state: state, dispatcher: dispatcher)
+        }
+    }
+}
