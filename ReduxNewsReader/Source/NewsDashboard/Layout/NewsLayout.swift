@@ -32,6 +32,7 @@ public final class NewsLayout: StackLayout<UIView> {
                             .foregroundColor: Asset.Colors.blue.color
                         ]
                     ),
+                    numberOfLines: 1,
                     viewReuseId: "\(viewReuseId).title"
                 ),
                 LabelLayout(
@@ -56,7 +57,7 @@ public final class NewsLayout: StackLayout<UIView> {
         
         super.init(
             axis: .horizontal,
-            spacing: 23,
+            spacing: 10,
             distribution: .leading,
             viewReuseId: viewReuseId,
             sublayouts: [
@@ -71,7 +72,7 @@ public final class NewsLayout: StackLayout<UIView> {
                         view.backgroundColor = Asset.Colors.darkGray.color
                     }
                 ),
-                texts.center(axis: .vertical)
+                texts.center(axis: .vertical).insets(.left(10))
             ],
             config: { view in
                 view.layer.cornerRadius = 16
