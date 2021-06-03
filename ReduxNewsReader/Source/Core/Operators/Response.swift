@@ -52,7 +52,7 @@ public enum Response<T: Decodable> {
         guard let data = data else {
             preconditionFailure("Data need to be here")
         }
-
+        
         if response.isSuccessful {
             do {
                 if data.count > 0 {

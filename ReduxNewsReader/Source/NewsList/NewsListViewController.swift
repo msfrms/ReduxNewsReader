@@ -20,7 +20,7 @@ extension UICollectionViewLayout {
     }
 }
 
-public final class NewsListViewController: UIViewController {
+public final class NewsListViewController: BaseViewController {
 
     public enum Props {
 
@@ -36,8 +36,8 @@ public final class NewsListViewController: UIViewController {
     }
     
     private enum Constants {
-        // как только скролим к половине контента то бросаем запрос за новой порцией данных
-        static let batchingFactor: CGFloat = 0.5
+        // как только скролим к концу контента то бросаем запрос за новой порцией данных
+        static let batchingFactor: CGFloat = 0.65
         static let newsReuseId = "NewsCollectionViewCell"
     }
     
@@ -162,8 +162,8 @@ public final class NewsListViewController: UIViewController {
 extension NewsListViewController: UIScrollViewDelegate {
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollFactor = scrollView.contentOffset.y / scrollView.bounds.height
-
+        let scrollFactor = scrollView.contentOffset.y / scrollView.contentSize.height
+        
         if scrollFactor >= Constants.batchingFactor {
             props.list?.onNextPage.execute()
         }

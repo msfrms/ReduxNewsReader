@@ -26,22 +26,66 @@ public enum NewsDashboardConnector {
                             .init(
                                 title: "Истории",
                                 image: Asset.historyBig.image,
-                                onTap: .nop
+                                onTap: Command {
+                                    let newsListViewController = NewsListViewController()
+                                    NewsListConnector.connect(
+                                        store: store,
+                                        to: newsListViewController,
+                                        category: .history
+                                    )
+                                    view.navigationController?.pushViewController(
+                                        newsListViewController,
+                                        animated: true
+                                    )
+                                }
                             ),
                             .init(
                                 title: "Игры",
                                 image: Asset.gameBig.image,
-                                onTap: .nop
+                                onTap: Command {
+                                    let newsListViewController = NewsListViewController()
+                                    NewsListConnector.connect(
+                                        store: store,
+                                        to: newsListViewController,
+                                        category: .games
+                                    )
+                                    view.navigationController?.pushViewController(
+                                        newsListViewController,
+                                        animated: true
+                                    )
+                                }
                             ),
                             .init(
                                 title: "Шапито",
                                 image: Asset.shapitoBig.image,
-                                onTap: .nop
+                                onTap: Command {
+                                    let newsListViewController = NewsListViewController()
+                                    NewsListConnector.connect(
+                                        store: store,
+                                        to: newsListViewController,
+                                        category: .shapito
+                                    )
+                                    view.navigationController?.pushViewController(
+                                        newsListViewController,
+                                        animated: true
+                                    )
+                                }
                             ),
                             .init(
                                 title: "Разбор",
                                 image: Asset.debriefingBig.image,
-                                onTap: .nop
+                                onTap: Command {
+                                    let newsListViewController = NewsListViewController()
+                                    NewsListConnector.connect(
+                                        store: store,
+                                        to: newsListViewController,
+                                        category: .razbor
+                                    )
+                                    view.navigationController?.pushViewController(
+                                        newsListViewController,
+                                        animated: true
+                                    )
+                                }
                             )
                         ]),
                         latestNews: {

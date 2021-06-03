@@ -26,7 +26,7 @@ public struct NewsListState {
             }
             let state = NewsListFlowState(
                 ids: [],
-                request: prev.request,
+                request: nil,
                 page: prev.page,
                 hasNext: prev.hasNext,
                 status: .failed
@@ -39,7 +39,7 @@ public struct NewsListState {
             }
             let state = NewsListFlowState(
                 ids: prev.ids + news.map { $0.id },
-                request: prev.request,
+                request: nil,
                 page: prev.page,
                 hasNext: hasNext,
                 status: .success
@@ -61,10 +61,13 @@ public struct NewsListState {
             guard let prev = byCategory[category], prev.hasNext else {
                 return self
             }
+            guard prev.request == nil else {
+                return self
+            }
             let state = NewsListFlowState(
                 ids: prev.ids,
                 request: UUID(),
-                page: prev.page,
+                page: page,
                 hasNext: prev.hasNext,
                 status: .inProgress
             )
