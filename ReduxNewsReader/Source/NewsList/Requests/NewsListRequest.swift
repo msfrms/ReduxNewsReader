@@ -57,7 +57,7 @@ public enum NewsListRequests {
                 case .success(.some(let rep)):
                     dispatcher.dispatch(action: NewsListAction.newsListByCategory(
                                             category,
-                                            .loaded(rep.newList))
+                                            .loaded(rep.newList, rep.has_next))
                     )
 
                 default:
@@ -69,31 +69,5 @@ public enum NewsListRequests {
                 
             }
         }.compactMap { $0 }
-    }
-    
-    public static func latestNews(
-        state: AppState,
-        dispatcher: Dispatcher) -> NetworkOperator.Request? {
-    
-        let request = URLRequest(url: URL(string: "https://meduza.io/api/v3/search?chrono=\(NewsCategory.history.rawValue)&locale=ru&page=0&per_page=24")!)
-        
-        return state.newsLatest.request.map { id in
-            return NetworkOperator.Request(id: id, request: request) { data, response, error in
-                    let rep = Response<ListNewsResponse>(
-                        data: data,
-                        response: response,
-                        error: error
-                    )
-                    switch rep {
-                    case .success(.some(let r)):
-                        dispatcher.dispatch(
-                            action: NewsListAction.latestNews(.loaded(r.newList))
-                        )
-
-                    default:
-                        dispatcher.dispatch(action: NewsListAction.latestNews(.failed))
-                    }
-                }
-        }
     }
 }
