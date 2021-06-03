@@ -57,7 +57,7 @@ public enum NewsListRequests {
                 case .success(.some(let rep)):
                     dispatcher.dispatch(action: NewsListAction.newsListByCategory(
                                             category,
-                                            .loaded(rep.newList))
+                                            .loaded(rep.newList, rep.has_next))
                     )
 
                 default:

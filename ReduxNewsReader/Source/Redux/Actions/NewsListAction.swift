@@ -8,11 +8,12 @@
 import Foundation
 
 public enum NewsListAction: Action {
+    public typealias PageHasNext = Bool
+    public typealias Page = Int
     public enum FetchList {
-        case start
+        case start(Page)
         case failed
-        case loaded([NewsList])
+        case loaded([NewsList], PageHasNext)
     }
-    case latestNews(FetchList)
     case newsListByCategory(NewsCategory, FetchList)
 }
