@@ -30,6 +30,7 @@
 		CF1E05A926678C2200A98FAF /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */; };
 		CF1E05AB26678E0600A98FAF /* NewsCardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */; };
 		CF1E05AE2667C54D00A98FAF /* NewsCardLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E05AD2667C54D00A98FAF /* NewsCardLoadingView.swift */; };
+		CF296271266A3B3400C03B45 /* NewsCardConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF296270266A3B3400C03B45 /* NewsCardConnector.swift */; };
 		CF2CE48026623469007E12B1 /* LatestNewsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */; };
 		CF2CE48326624587007E12B1 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48226624587007E12B1 /* NewsListViewController.swift */; };
 		CF2CE48526627A73007E12B1 /* CardEmptyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */; };
@@ -116,6 +117,7 @@
 		CF1E05A826678C2200A98FAF /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		CF1E05AA26678E0600A98FAF /* NewsCardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardAction.swift; sourceTree = "<group>"; };
 		CF1E05AD2667C54D00A98FAF /* NewsCardLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardLoadingView.swift; sourceTree = "<group>"; };
+		CF296270266A3B3400C03B45 /* NewsCardConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardConnector.swift; sourceTree = "<group>"; };
 		CF2CE47F26623469007E12B1 /* LatestNewsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsLoadingView.swift; sourceTree = "<group>"; };
 		CF2CE48226624587007E12B1 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		CF2CE48426627A73007E12B1 /* CardEmptyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEmptyLayout.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				CF1E058F26665C2100A98FAF /* Requests */,
 				CF2CE490266378AB007E12B1 /* Layout */,
 				CF2CE4932663BEEF007E12B1 /* NewsCardViewController.swift */,
+				CF296270266A3B3400C03B45 /* NewsCardConnector.swift */,
 			);
 			path = NewsCard;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				CF1E059E266665E400A98FAF /* Status.swift in Sources */,
 				CFB13D0D265B949600A7C1B7 /* SceneDelegate.swift in Sources */,
 				CFC8950A2660FD2000090BCD /* LatestNewsLayout.swift in Sources */,
+				CF296271266A3B3400C03B45 /* NewsCardConnector.swift in Sources */,
 				CF1E05972666622100A98FAF /* NewsLatestState.swift in Sources */,
 				CF1E058E26665AE600A98FAF /* HTTPURLResponseExtensions.swift in Sources */,
 				CF2CE48E26637806007E12B1 /* StringExtensions.swift in Sources */,

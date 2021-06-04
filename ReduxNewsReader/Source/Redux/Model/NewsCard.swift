@@ -12,6 +12,7 @@ public struct NewsCard {
         public let value: String
     }
     public let id: Id
+    public let coverUrl: URL?
     public let title: String
     public let subtitle: String
     public let source: String
