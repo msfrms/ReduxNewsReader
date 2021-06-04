@@ -137,7 +137,7 @@ public class NewsCardLayout: StackLayout<UIView> {
                         sourceLayout
                     ]
                 ).insets(.left(40).right(40)),
-                page
+                page.insets(.bottom(10))
             ]
         )
     }

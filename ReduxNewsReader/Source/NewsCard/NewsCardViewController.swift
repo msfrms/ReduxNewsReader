@@ -29,8 +29,8 @@ public class NewsCardViewController: BaseViewController {
         scrollView.backgroundColor = Asset.Colors.lightGray.color
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         render()
     }
     
