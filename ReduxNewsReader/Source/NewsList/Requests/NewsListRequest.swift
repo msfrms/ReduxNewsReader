@@ -59,15 +59,19 @@ public enum NewsListRequests {
                 
                 switch response {
                 case .success(.some(let rep)):
-                    dispatcher.dispatch(action: NewsListAction.newsListByCategory(
-                                            category,
-                                            .loaded(rep.newList, rep.has_next))
+                    dispatcher.dispatch(
+                        action: NewsListAction.newsListByCategory(
+                            category,
+                            .loaded(rep.newList, rep.has_next)
+                        )
                     )
 
                 default:
-                    dispatcher.dispatch(action: NewsListAction.newsListByCategory(
-                                            category,
-                                            .failed)
+                    dispatcher.dispatch(
+                        action: NewsListAction.newsListByCategory(
+                            category,
+                            .failed
+                        )
                     )
                 }
                 
