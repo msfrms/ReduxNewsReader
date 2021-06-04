@@ -6,6 +6,7 @@
 //
 
 import LayoutKit
+import SkeletonView
 
 public final class LatestNewsLayout: StackLayout<UIView> {
     public struct Props {
@@ -14,7 +15,15 @@ public final class LatestNewsLayout: StackLayout<UIView> {
         public let news: [NewsLayout.Props]
     }
     
-    public init(props: Props, viewReuseId: String) {
+    public enum Styles {
+        case forNormal
+        case forLoading
+    }
+    
+    public init(props: Props, viewReuseId: String, styles: Styles = .forNormal) {
+        let titleColor = styles == .forNormal ? Asset.Colors.black.color : UIColor.clear
+        let moreColor = styles == .forNormal ? Asset.Colors.blue.color : UIColor.clear
+        
         let header = StackLayout(
             axis: .horizontal,
             distribution: .fillEqualSpacing,
@@ -24,23 +33,25 @@ public final class LatestNewsLayout: StackLayout<UIView> {
                         string: props.header,
                         attributes: [
                             .font: UIFont.systemFont(ofSize: 20, weight: .heavy),
-                            .foregroundColor: Asset.Colors.black.color
+                            .foregroundColor: titleColor
                         ]
                     ),
-                    viewReuseId: "\(viewReuseId).header"
+                    viewReuseId: "\(viewReuseId).header",
+                    config: { $0.isSkeletonable = false }
                 ),
                 SizeLayout<UIButton>(
                     width: 44,
                     height: 20,
                     viewReuseId: "\(viewReuseId).more",
                     config: { view in
+                        view.isSkeletonable = false
                         view.add(command: props.more, event: .touchUpInside)
                         view.setAttributedTitle(
                             .init(
                                 string: "Все",
                                 attributes: [
                                     .font: UIFont.systemFont(ofSize: 20, weight: .medium),
-                                    .foregroundColor: Asset.Colors.blue.color
+                                    .foregroundColor: moreColor
                                 ]
                             ),
                             for: .normal
@@ -50,7 +61,7 @@ public final class LatestNewsLayout: StackLayout<UIView> {
                                 string: "Все",
                                 attributes: [
                                     .font: UIFont.systemFont(ofSize: 20, weight: .medium),
-                                    .foregroundColor: Asset.Colors.blue.color.withAlphaComponent(0.3)
+                                    .foregroundColor: moreColor.withAlphaComponent(0.3)
                                 ]
                             ),
                             for: .highlighted
@@ -75,7 +86,8 @@ public final class LatestNewsLayout: StackLayout<UIView> {
                         ShadowLayout(
                             sublayout: NewsLayout(
                                 props: news,
-                                viewReuseId: "\(viewReuseId).news[\(index)]"
+                                viewReuseId: "\(viewReuseId).news[\(index)]",
+                                styles: .loading
                             ),
                             viewReuseId: "\(viewReuseId).news[\(index)].shadow",
                             styles: .shadow(.blue)
