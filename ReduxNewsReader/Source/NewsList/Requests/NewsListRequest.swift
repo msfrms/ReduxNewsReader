@@ -10,10 +10,14 @@ import Foundation
 public enum NewsListRequests {
     
     private struct ListNewsResponse: Decodable {
+        struct Image: Decodable {
+            let small_url: String?
+        }
+        
         struct DocumentResponse: Decodable {
             let title: String
             let second_title: String?
-            let share_image_url: String?
+            let image: Image?
         }
         let documents: [String: DocumentResponse]
         let collection: [String]
@@ -26,7 +30,9 @@ public enum NewsListRequests {
                 return doc.map {
                     NewsList(
                         id: .init(value: id),
-                        coverUrl: $0.share_image_url.flatMap { URL(string: $0) },
+                        coverUrl: $0.image
+                            .flatMap { $0.small_url }
+                            .flatMap { URL(string: "https://meduza.io/\($0)") },
                         title: $0.title,
                         description: $0.second_title ?? ""
                     )
