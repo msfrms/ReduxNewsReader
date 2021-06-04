@@ -13,9 +13,11 @@ public enum NewsListConnector {
         store: Store<AppState>,
         to view: NewsListViewController,
         category: NewsCategory) {
+        
         view.didLoad = Command {
             store.dispatch(action: NewsListAction.newsListByCategory(category, .start(0)))
         }
+        
         let unsubscribe = store.subscribe(command: CommandWith<AppState> { [weak view] state in
             guard let view = view else {
                 return
@@ -26,8 +28,12 @@ public enum NewsListConnector {
             }
             
             switch newsState.status {
-            case .inProgress, .none:
+            case .none:
                 view.render(props: .inProgress)
+
+            case .inProgress where newsState.ids.isEmpty:
+                view.render(props: .inProgress)
+
             case .failed:
                 view.render(
                     props: .empty(
@@ -38,7 +44,8 @@ public enum NewsListConnector {
                         )
                     )
                 )
-            case .success:
+
+            case .success, .inProgress:
                 let newsProps: [NewsLayout.Props] = newsState.ids
                     .compactMap { state.newsListAll.byId[$0] }
                     .map { news in
