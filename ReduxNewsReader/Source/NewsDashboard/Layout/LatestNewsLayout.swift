@@ -84,10 +84,14 @@ public final class LatestNewsLayout: StackLayout<UIView> {
                     distribution: .leading,
                     sublayouts: props.news.mapWithIndex { news, index in
                         ShadowLayout(
-                            sublayout: NewsLayout(
-                                props: news,
-                                viewReuseId: "\(viewReuseId).news[\(index)]",
-                                styles: .loading
+                            sublayout: RecognizeDetectorLayout(
+                                props: .general(news.onTap),
+                                sublayout: NewsLayout(
+                                    props: news,
+                                    viewReuseId: "\(viewReuseId).news[\(index)]",
+                                    styles: .normal
+                                ),
+                                viewReuseId: "\(viewReuseId).news[\(index)].tap"
                             ),
                             viewReuseId: "\(viewReuseId).news[\(index)].shadow",
                             styles: .shadow(.blue)
