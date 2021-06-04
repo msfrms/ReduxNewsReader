@@ -7,6 +7,7 @@
 
 import LayoutKit
 import Kingfisher
+import SkeletonView
 
 public class NewsCardLayout: StackLayout<UIView> {
 
@@ -51,7 +52,8 @@ public class NewsCardLayout: StackLayout<UIView> {
                             }
                         }()
                     ),
-                    viewReuseId: "\(viewReuseId).source.title"
+                    viewReuseId: "\(viewReuseId).source.title",
+                    config: { $0.isSkeletonable = true }
                 ),
                 LabelLayout(
                     attributedText: .init(
@@ -61,7 +63,8 @@ public class NewsCardLayout: StackLayout<UIView> {
                             .foregroundColor: Asset.Colors.black.color
                         ]
                     ),
-                    viewReuseId: "\(viewReuseId).source.date"
+                    viewReuseId: "\(viewReuseId).source.date",
+                    config: { $0.isSkeletonable = true }
                 )
             ]
         )
@@ -70,6 +73,8 @@ public class NewsCardLayout: StackLayout<UIView> {
             SizeLayout<UIImageView>(
                 height: 220,
                 config: { view in
+                    view.isSkeletonable = true
+                    view.contentMode = .scaleAspectFill
                     view.kf.setImage(with: url)
                     view.backgroundColor = Asset.Colors.darkGray.color
                     view.layer.masksToBounds = true
@@ -93,11 +98,13 @@ public class NewsCardLayout: StackLayout<UIView> {
                                 .foregroundColor: Asset.Colors.black.color
                             ]
                         ),
-                        viewReuseId: "\(viewReuseId).subtitle"
+                        viewReuseId: "\(viewReuseId).subtitle",
+                        config: { $0.isSkeletonable = true }
                     ).insets(.top(16).left(40).right(40)),
                     LabelLayout(
                         attributedText: props.content.htmlAsAttributedString ?? .init(),
-                        viewReuseId: "\(viewReuseId).body"
+                        viewReuseId: "\(viewReuseId).body",
+                        config: { $0.isSkeletonable = true }
                     ).insets(.left(40).right(40)),
                     
                 ]
@@ -124,7 +131,8 @@ public class NewsCardLayout: StackLayout<UIView> {
                                     .foregroundColor: Asset.Colors.black.color
                                 ]
                             ),
-                            viewReuseId: "\(viewReuseId).title"
+                            viewReuseId: "\(viewReuseId).title",
+                            config: { $0.isSkeletonable = true }
                         ),
                         sourceLayout
                     ]

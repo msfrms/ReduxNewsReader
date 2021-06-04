@@ -7,7 +7,7 @@
 
 import LayoutKit
 
-public class NewsCardViewController: UIViewController {
+public class NewsCardViewController: BaseViewController {
     
     public enum Props {
         case inProgress

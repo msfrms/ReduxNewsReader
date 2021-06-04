@@ -10,7 +10,8 @@ import Foundation
 public extension String {
     
     var htmlAsAttributedString: NSAttributedString? {
-        let data = data(using: .utf8) ?? Data()
+        let modifiedFont = String(format:"<span style=\"font-family: '-apple-system', 'HelveticaNeue'; font-size: 15\">%@</span>", self)
+        let data = modifiedFont.data(using: .utf8) ?? Data()
         return try? NSAttributedString(
             data: data,
             options: [

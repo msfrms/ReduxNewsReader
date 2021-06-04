@@ -18,12 +18,17 @@ public enum NewsCardRequests {
             let body: String
         }
         
+        struct Image: Decodable {
+            let large_url: String?
+        }
+        
         struct Root: Decodable {
             let title: String
             let second_title: String
             let source: Source
             let content: Content
             let pub_date: String
+            let image: Image?
         }
         
         let root: Root
@@ -34,7 +39,7 @@ public enum NewsCardRequests {
         dispatcher: Dispatcher) -> [NetworkOperator.Request] {
 
         return state.newsCard.byId.compactMap { id, state  in
-            let request = URLRequest(url: URL(string: "https://meduza.io/api/v3/\(id)")!)
+            let request = URLRequest(url: URL(string: "https://meduza.io/api/v3/\(id.value)")!)
             return state.request.map { requestId in
                 return NetworkOperator.Request(id: requestId, request: request) { data, response, error in
                     let rep = Response<NewsCardResponse>(
@@ -46,6 +51,9 @@ public enum NewsCardRequests {
                     case .success(.some(let r)):
                         let card = NewsCard(
                             id: id,
+                            coverUrl: r.root.image
+                                .flatMap { $0.large_url }
+                                .flatMap { URL(string: "https://meduza.io/\($0)") },
                             title: r.root.title,
                             subtitle: r.root.second_title,
                             source: r.root.source.name,
@@ -56,7 +64,7 @@ public enum NewsCardRequests {
                             }(),
                             body: r.root.content.body
                         )
-                        dispatcher.dispatch(action: NewsCardAction.loaded(card))
+                            dispatcher.dispatch(action: NewsCardAction.loaded(card))
                         
                     default:
                         dispatcher.dispatch(action: NewsCardAction.failed(id))
