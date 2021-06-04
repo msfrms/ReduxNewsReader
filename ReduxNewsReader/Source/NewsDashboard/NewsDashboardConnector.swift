@@ -108,7 +108,10 @@ public enum NewsDashboardConnector {
                                             title: news.title,
                                             subtitle: news.description,
                                             coverUrl: news.coverUrl,
-                                            onTap: .nop
+                                            onTap: NewsCardConnector.openCardBy(
+                                                newsId: .init(value: news.id.value),
+                                                store: store,
+                                                fromViewController: view)
                                         )
                                     }
                                 return .loaded(
