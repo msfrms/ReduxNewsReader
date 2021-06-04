@@ -50,6 +50,7 @@ public enum NewsListRequests {
             guard let id = state.request else {
                 return nil
             }
+
             return NetworkOperator.Request(id: id,request: request) { data, response, error in
                 let response = Response<ListNewsResponse>(
                     data: data,
@@ -59,15 +60,19 @@ public enum NewsListRequests {
                 
                 switch response {
                 case .success(.some(let rep)):
-                    dispatcher.dispatch(action: NewsListAction.newsListByCategory(
-                                            category,
-                                            .loaded(rep.newList, rep.has_next))
+                    dispatcher.dispatch(
+                        action: NewsListAction.newsListByCategory(
+                            category,
+                            .loaded(rep.newList, rep.has_next)
+                        )
                     )
 
                 default:
-                    dispatcher.dispatch(action: NewsListAction.newsListByCategory(
-                                            category,
-                                            .failed)
+                    dispatcher.dispatch(
+                        action: NewsListAction.newsListByCategory(
+                            category,
+                            .failed
+                        )
                     )
                 }
                 
