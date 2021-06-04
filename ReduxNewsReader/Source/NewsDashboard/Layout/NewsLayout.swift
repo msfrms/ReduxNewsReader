@@ -67,6 +67,7 @@ public final class NewsLayout: StackLayout<UIView> {
                     viewReuseId: "\(viewReuseId).icon",
                     config: { view in
                         view.kf.setImage(with: props.coverUrl)
+                        view.contentMode = .scaleAspectFill
                         view.layer.cornerRadius = 16
                         view.clipsToBounds = true
                         view.backgroundColor = Asset.Colors.darkGray.color
