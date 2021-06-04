@@ -48,7 +48,7 @@ extension UIView {
         view.subviews.forEach {
             recursiveShowAnimatedSkeleton(view: $0)
         }
-        view.isSkeletonable = true
+
         view.showAnimatedSkeleton(
             usingColor: Asset.Colors.lightGray.color,
             animation: nil,

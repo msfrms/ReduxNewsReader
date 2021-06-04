@@ -7,6 +7,7 @@
 
 import LayoutKit
 import Kingfisher
+import SkeletonView
 
 public final class NewsLayout: StackLayout<UIView> {
     
@@ -17,7 +18,12 @@ public final class NewsLayout: StackLayout<UIView> {
         public let onTap: Command
     }
     
-    public init(props: Props, viewReuseId: String) {
+    public enum Styles {
+        case normal
+        case loading
+    }
+    
+    public init(props: Props, viewReuseId: String, styles: Styles = .normal) {
         
         let texts = StackLayout(
             axis: .vertical,
@@ -33,7 +39,8 @@ public final class NewsLayout: StackLayout<UIView> {
                         ]
                     ),
                     numberOfLines: 1,
-                    viewReuseId: "\(viewReuseId).title"
+                    viewReuseId: "\(viewReuseId).title",
+                    config: { $0.isSkeletonable = true }
                 ),
                 LabelLayout(
                     attributedText: .init(
@@ -49,8 +56,9 @@ public final class NewsLayout: StackLayout<UIView> {
                             }()
                         ]
                     ),
-                    numberOfLines: 2,
-                    viewReuseId: "\(viewReuseId).subtitle"
+                    numberOfLines: styles == .normal ? 2 : 1,
+                    viewReuseId: "\(viewReuseId).subtitle",
+                    config: { $0.isSkeletonable = true }
                 )
             ]
         )
@@ -66,6 +74,7 @@ public final class NewsLayout: StackLayout<UIView> {
                     height: 92,
                     viewReuseId: "\(viewReuseId).icon",
                     config: { view in
+                        view.isSkeletonable = true
                         view.kf.setImage(with: props.coverUrl)
                         view.contentMode = .scaleAspectFill
                         view.layer.cornerRadius = 16
@@ -76,6 +85,7 @@ public final class NewsLayout: StackLayout<UIView> {
                 texts.center(axis: .vertical).insets(.left(10))
             ],
             config: { view in
+                view.isSkeletonable = true
                 view.layer.cornerRadius = 16
                 view.backgroundColor = .white
             }

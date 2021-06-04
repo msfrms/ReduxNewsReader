@@ -17,31 +17,31 @@ public final class NewsListLoadingView: UIView {
         let news: [NewsLayout.Props] = [
             .init(
                 title: "BIG DATA",
-                subtitle: "Why Big Data Needs Thick Data?",
+                subtitle: "Whx Bix Data Needs Thick Data?",
                 coverUrl: nil,
                 onTap: .nop
             ),
             .init(
                 title: "UX DESIGN",
-                subtitle: "Step design sprint for UX beginner",
+                subtitle: "Whx Bix Data Needs Thick Data?",
                 coverUrl: nil,
                 onTap: .nop
             ),
             .init(
                 title: "BIG DATA",
-                subtitle: "Why Big Data Needs Thick Data?",
+                subtitle: "Whx Bix Data Needs Thick Data?",
                 coverUrl: nil,
                 onTap: .nop
             ),
             .init(
                 title: "UX DESIGN",
-                subtitle: "Step design sprint for UX beginner",
+                subtitle: "Whx Bix Data Needs Thick Data?",
                 coverUrl: nil,
                 onTap: .nop
             ),
             .init(
                 title: "BIG DATA",
-                subtitle: "Why Big Data Needs Thick Data?",
+                subtitle: "Whx Bix Data Needs Thick Data?",
                 coverUrl: nil,
                 onTap: .nop
             )
@@ -52,7 +52,11 @@ public final class NewsListLoadingView: UIView {
             spacing: 10,
             distribution: .leading,
             sublayouts: news.mapWithIndex { news, index in
-                NewsLayout(props: news, viewReuseId: "\(rootViewReuseId).news[\(index)]")
+                NewsLayout(
+                    props: news,
+                    viewReuseId: "\(rootViewReuseId).news[\(index)]",
+                    styles: .loading
+                )
             }
         )
         

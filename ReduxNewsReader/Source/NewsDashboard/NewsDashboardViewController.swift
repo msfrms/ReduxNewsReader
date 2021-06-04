@@ -56,7 +56,7 @@ public class NewsDashboardViewController: BaseViewController {
                 return LatestNewsLayout(
                     props: props,
                     viewReuseId: "\(rootViewReuseId).latest.news.loaded"
-                ).insets(.left(40).right(40))
+                ).insets(.left(10).right(10))
                 
             case .inProgress:
                 return SizeLayout<LatestNewsLoadingView>(

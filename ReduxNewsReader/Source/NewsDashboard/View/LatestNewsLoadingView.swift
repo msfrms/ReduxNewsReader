@@ -19,19 +19,19 @@ public final class LatestNewsLoadingView: UIView {
                 news: [
                     .init(
                         title: "BIG DATA",
-                        subtitle: "Why Big Data Needs Thick Data?",
+                        subtitle: "Whx Bi Data Needs Thick Data?",
                         coverUrl: nil,
                         onTap: .nop
                     ),
                     .init(
                         title: "UX DESIGN",
-                        subtitle: "Step design sprint for UX beginner",
+                        subtitle: "Stex desinx sxrint for UX bexinner",
                         coverUrl: nil,
                         onTap: .nop
                     ),
                 ]),
             viewReuseId: "latest.news.loading"
-        ).insets(.left(40).right(40))
+        ).insets(.left(10).right(10))
         
         let arrangement = layout.arrangement(
             origin: .zero,
