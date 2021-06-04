@@ -50,6 +50,7 @@ public enum NewsListRequests {
             guard let id = state.request else {
                 return nil
             }
+
             return NetworkOperator.Request(id: id,request: request) { data, response, error in
                 let response = Response<ListNewsResponse>(
                     data: data,
