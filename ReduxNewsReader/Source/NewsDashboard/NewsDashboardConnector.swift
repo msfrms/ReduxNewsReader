@@ -10,9 +10,13 @@ import UIKit
 public enum NewsDashboardConnector {
     
     public static func connect(store: Store<AppState>, to view: NewsDashboardViewController) {
-        view.didLoad = Command {
+        
+        let latestNewsLoad = Command {
             store.dispatch(action: NewsListAction.newsListByCategory(.history, .start(0)))
         }
+        
+        view.didLoad = latestNewsLoad
+        
         let unsubscribe = store.subscribe(
             command: CommandWith<AppState> { [weak view] state in
                 guard let view = view else {
@@ -90,15 +94,18 @@ public enum NewsDashboardConnector {
                         ]),
                         latestNews: {
                             switch state.newsLatest.status {
+
                             case .inProgress, .none:
                                 return .inProgress
+
                             case .failed:
                                 return .empty(
                                     .init(
                                         title: "Упс, что то пошло не так",
-                                        onRetry: .nop
+                                        onRetry: latestNewsLoad
                                     )
                                 )
+
                             case .success:
                                 let newsProps: [NewsLayout.Props] = state.newsLatest
                                     .ids

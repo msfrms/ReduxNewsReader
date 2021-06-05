@@ -13,11 +13,13 @@ public enum NewsListConnector {
         store: Store<AppState>,
         to view: NewsListViewController,
         category: NewsCategory) {
-        
-        view.didLoad = Command {
+
+        let newsListLoad = Command {
             store.dispatch(action: NewsListAction.newsListByCategory(category, .start(0)))
         }
-        
+
+        view.didLoad = newsListLoad
+
         let unsubscribe = store.subscribe(command: CommandWith<AppState> { [weak view] state in
             guard let view = view else {
                 return

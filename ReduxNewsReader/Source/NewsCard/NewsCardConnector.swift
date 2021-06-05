@@ -28,9 +28,11 @@ public enum NewsCardConnector {
         to view: NewsCardViewController,
         newsId: NewsCard.Id) {
         
-        view.didLoad = Command {
+        let newsLoad = Command {
             store.dispatch(action: NewsCardAction.start(newsId))
         }
+        
+        view.didLoad = newsLoad
         
         let unsubscribe = store.subscribe(command: CommandWith<AppState> { [weak view] state in
 
@@ -54,7 +56,7 @@ public enum NewsCardConnector {
                         .init(
                             title: "Упс, что то пошло не так",
                             description: "Возможно у вас нет интернета",
-                            onRetry: .nop
+                            onRetry: newsLoad
                         )
                     )
                 )
