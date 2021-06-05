@@ -43,6 +43,7 @@
 		CF2CE492266378B9007E12B1 /* NewsCardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE491266378B9007E12B1 /* NewsCardLayout.swift */; };
 		CF2CE4942663BEEF007E12B1 /* NewsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CE4932663BEEF007E12B1 /* NewsCardViewController.swift */; };
 		CF512FEF265E565700F0AE86 /* ShadowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF512FEE265E565700F0AE86 /* ShadowLayout.swift */; };
+		CF5A31C9266B411100A1AB91 /* Startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A31C8266B411100A1AB91 /* Startup.swift */; };
 		CF7BAD5B265D1FD0003B18A3 /* PageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BAD5A265D1FD0003B18A3 /* PageLayout.swift */; };
 		CF7BAD61265D2BD7003B18A3 /* OnboardingTextLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BAD60265D2BD7003B18A3 /* OnboardingTextLayout.swift */; };
 		CF7BAD63265D2CD7003B18A3 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BAD62265D2CD7003B18A3 /* Command.swift */; };
@@ -132,6 +133,7 @@
 		CF2CE491266378B9007E12B1 /* NewsCardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardLayout.swift; sourceTree = "<group>"; };
 		CF2CE4932663BEEF007E12B1 /* NewsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardViewController.swift; sourceTree = "<group>"; };
 		CF512FEE265E565700F0AE86 /* ShadowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLayout.swift; sourceTree = "<group>"; };
+		CF5A31C8266B411100A1AB91 /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
 		CF7BAD5A265D1FD0003B18A3 /* PageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout.swift; sourceTree = "<group>"; };
 		CF7BAD60265D2BD7003B18A3 /* OnboardingTextLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextLayout.swift; sourceTree = "<group>"; };
 		CF7BAD62265D2CD7003B18A3 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				CF2CE4812662456D007E12B1 /* NewsList */,
 				CFC29E08265FA55D00F1B4E7 /* NewsDashboard */,
 				CF7BAD58265D1FA1003B18A3 /* Onboarding */,
+				CF5A31C8266B411100A1AB91 /* Startup.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				CFC29E0B265FA65400F1B4E7 /* CategoryLayout.swift in Sources */,
 				CF2CE4872662801E007E12B1 /* PlainEmptyLayout.swift in Sources */,
 				CF1E05A926678C2200A98FAF /* DictionaryExtensions.swift in Sources */,
+				CF5A31C9266B411100A1AB91 /* Startup.swift in Sources */,
 				CF7BAD68265D34C7003B18A3 /* Plist.swift in Sources */,
 				CFC895022660CF3E00090BCD /* NewsCategoryListView.swift in Sources */,
 				CFD4B2D6265E639A003BD352 /* OnboardingGridCategoryLayout.swift in Sources */,
