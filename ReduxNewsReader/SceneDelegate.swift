@@ -21,15 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+        
         guard let s = (scene as? UIWindowScene) else { return }
+        
         window = UIWindow(windowScene: s)
         
         store.subscribe(command: networkDriver.asSubscriber(with: store))
         
-        let dashboardViewController = NewsDashboardViewController()
-        NewsDashboardConnector.connect(store: store, to: dashboardViewController)
-        
-        window?.rootViewController = UINavigationController(rootViewController: dashboardViewController)
+        window?.rootViewController = Startup().create(with: store)
         window?.makeKeyAndVisible()
     }
     
