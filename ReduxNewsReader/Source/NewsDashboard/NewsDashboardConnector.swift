@@ -10,9 +10,13 @@ import UIKit
 public enum NewsDashboardConnector {
     
     public static func connect(store: Store<AppState>, to view: NewsDashboardViewController) {
-        view.didLoad = Command {
+        
+        let latestNewsLoad = Command {
             store.dispatch(action: NewsListAction.newsListByCategory(.history, .start(0)))
         }
+        
+        view.didLoad = latestNewsLoad
+        
         let unsubscribe = store.subscribe(
             command: CommandWith<AppState> { [weak view] state in
                 guard let view = view else {
@@ -26,79 +30,54 @@ public enum NewsDashboardConnector {
                             .init(
                                 title: "Истории",
                                 image: Asset.historyBig.image,
-                                onTap: Command {
-                                    let newsListViewController = NewsListViewController()
-                                    NewsListConnector.connect(
-                                        store: store,
-                                        to: newsListViewController,
-                                        category: .history
-                                    )
-                                    view.navigationController?.pushViewController(
-                                        newsListViewController,
-                                        animated: true
-                                    )
-                                }
+                                onTap: NewsListConnector.openNewsList(
+                                    by: .history,
+                                    store: store,
+                                    fromViewController: view
+                                )
                             ),
                             .init(
                                 title: "Игры",
                                 image: Asset.gameBig.image,
-                                onTap: Command {
-                                    let newsListViewController = NewsListViewController()
-                                    NewsListConnector.connect(
-                                        store: store,
-                                        to: newsListViewController,
-                                        category: .games
-                                    )
-                                    view.navigationController?.pushViewController(
-                                        newsListViewController,
-                                        animated: true
-                                    )
-                                }
+                                onTap: NewsListConnector.openNewsList(
+                                    by: .games,
+                                    store: store,
+                                    fromViewController: view
+                                )
                             ),
                             .init(
                                 title: "Шапито",
                                 image: Asset.shapitoBig.image,
-                                onTap: Command {
-                                    let newsListViewController = NewsListViewController()
-                                    NewsListConnector.connect(
-                                        store: store,
-                                        to: newsListViewController,
-                                        category: .shapito
-                                    )
-                                    view.navigationController?.pushViewController(
-                                        newsListViewController,
-                                        animated: true
-                                    )
-                                }
+                                onTap: NewsListConnector.openNewsList(
+                                    by: .shapito,
+                                    store: store,
+                                    fromViewController: view
+                                )
                             ),
                             .init(
                                 title: "Разбор",
                                 image: Asset.debriefingBig.image,
-                                onTap: Command {
-                                    let newsListViewController = NewsListViewController()
-                                    NewsListConnector.connect(
-                                        store: store,
-                                        to: newsListViewController,
-                                        category: .razbor
-                                    )
-                                    view.navigationController?.pushViewController(
-                                        newsListViewController,
-                                        animated: true
-                                    )
-                                }
+                                onTap: NewsListConnector.openNewsList(
+                                    by: .razbor,
+                                    store: store,
+                                    fromViewController: view
+                                )
                             )
                         ]),
                         latestNews: {
                             switch state.newsLatest.status {
+
                             case .inProgress, .none:
                                 return .inProgress
+
                             case .failed:
                                 return .empty(
                                     .init(
                                         title: "Упс, что то пошло не так",
-                                        onRetry: .nop
+                                        onRetry: latestNewsLoad
                                     )
                                 )
+
                             case .success:
                                 let newsProps: [NewsLayout.Props] = state.newsLatest
                                     .ids
@@ -117,7 +96,11 @@ public enum NewsDashboardConnector {
                                 return .loaded(
                                     .init(
                                         header: "Последние новости",
-                                        more: .nop,
+                                        more: NewsListConnector.openNewsList(
+                                            by: .history,
+                                            store: store,
+                                            fromViewController: view
+                                        ),
                                         news: newsProps
                                     )
                                 )

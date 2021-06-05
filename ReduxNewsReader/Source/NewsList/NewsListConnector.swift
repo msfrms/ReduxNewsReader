@@ -5,19 +5,41 @@
 //  Created by Mikhail Radaev on 03.06.2021.
 //
 
-import Foundation
+import UIKit
 
 public enum NewsListConnector {
+    
+    public static func openNewsList(
+        by category: NewsCategory,
+        store: Store<AppState>, fromViewController: UIViewController) -> Command {
+        Command {
+            let newsListViewController = NewsListViewController()
+            
+            connect(
+                store: store,
+                to: newsListViewController,
+                category: category
+            )
+            
+            fromViewController.navigationController?.pushViewController(
+                newsListViewController,
+                animated: true
+            )
+            
+        }.observe(queue: .main)
+    }
     
     public static func connect(
         store: Store<AppState>,
         to view: NewsListViewController,
         category: NewsCategory) {
-        
-        view.didLoad = Command {
+
+        let newsListLoad = Command {
             store.dispatch(action: NewsListAction.newsListByCategory(category, .start(0)))
         }
-        
+
+        view.didLoad = newsListLoad
+
         let unsubscribe = store.subscribe(command: CommandWith<AppState> { [weak view] state in
             guard let view = view else {
                 return
