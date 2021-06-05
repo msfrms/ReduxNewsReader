@@ -5,9 +5,29 @@
 //  Created by Mikhail Radaev on 03.06.2021.
 //
 
-import Foundation
+import UIKit
 
 public enum NewsListConnector {
+    
+    public static func openNewsList(
+        by category: NewsCategory,
+        store: Store<AppState>, fromViewController: UIViewController) -> Command {
+        Command {
+            let newsListViewController = NewsListViewController()
+            
+            connect(
+                store: store,
+                to: newsListViewController,
+                category: category
+            )
+            
+            fromViewController.navigationController?.pushViewController(
+                newsListViewController,
+                animated: true
+            )
+            
+        }.observe(queue: .main)
+    }
     
     public static func connect(
         store: Store<AppState>,
