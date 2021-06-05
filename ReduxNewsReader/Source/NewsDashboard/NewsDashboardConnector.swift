@@ -96,7 +96,11 @@ public enum NewsDashboardConnector {
                                 return .loaded(
                                     .init(
                                         header: "Последние новости",
-                                        more: .nop,
+                                        more: NewsListConnector.openNewsList(
+                                            by: .history,
+                                            store: store,
+                                            fromViewController: view
+                                        ),
                                         news: newsProps
                                     )
                                 )
